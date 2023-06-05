@@ -1,19 +1,25 @@
-﻿Band coldplay = new Band();
-coldplay.Name = "Coldplay";
+﻿Band coldplay = new Band("Coldplay");
 
-Album albumColdplay = new Album();
-albumColdplay.Name = "Music of the Spheres";
+Album albumColdplay = new Album("Music of the Spheres");
 
-Music music1 = new Music(coldplay);
-music1.Name = "High Power";
-music1.Duration = 230;
+Music music1 = new Music(coldplay, "High Power")
+{
+    Duration = 230,
+    Available = true,
+};
 
-Music music2 = new Music(coldplay);
-music2.Name = "My Universe";
-music2.Duration = 223;
+Music music2 = new Music(coldplay, "My Universe")
+{
+    Duration = 223,
+    Available = false,
+};
 
 albumColdplay.AddMusic(music1);
 albumColdplay.AddMusic(music2);
 
 coldplay.AddAlbum(albumColdplay);
+
+music1.ShowDataSheet();
+music2.ShowDataSheet();
+albumColdplay.ShowMusicsInAlbum();  
 coldplay.ShowDiscography();

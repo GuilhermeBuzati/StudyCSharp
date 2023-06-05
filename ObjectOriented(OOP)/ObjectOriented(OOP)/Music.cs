@@ -1,13 +1,13 @@
 ﻿class Music
 {
-    public Music(Band artist) {
-        
+    public Music(Band artist, string name)
+    {
         Artist = artist;
-    
+        Name = name;
     }
 
     //digite prop + tab (atalho para criação de atributo)
-    public string Name { get; set; }
+    public string Name { get; }
 
     public Band Artist { get; }
 
@@ -20,7 +20,7 @@
     public void ShowDataSheet()
     {
         Console.WriteLine($"Name: {Name}");
-        Console.WriteLine($"Artist: {Artist}");
+        Console.WriteLine($"Artist: {Artist.Name}");
         Console.WriteLine($"Duration: {Duration}");
 
         if (Available) Console.WriteLine($"Available"); else Console.WriteLine("Not Available");
