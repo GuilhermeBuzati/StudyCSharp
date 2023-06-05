@@ -1,9 +1,15 @@
 ﻿class Music
 {
+    public Music(Band artist) {
+        
+        Artist = artist;
+    
+    }
+
     //digite prop + tab (atalho para criação de atributo)
     public string Name { get; set; }
 
-    public string Artist { get; set; }
+    public Band Artist { get; }
 
     public int Duration { get; set; }
 
