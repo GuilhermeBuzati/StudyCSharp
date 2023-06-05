@@ -5,7 +5,7 @@ string messageWelcome = "Welcome to Screen Sound";
 //Creating dictionary
 Dictionary<string, List<int>> dictBand = new Dictionary<string, List<int>>();
 
-dictBand.Add("Link Park", new List<int> { 10, 9, 8 });
+dictBand.Add("Linkin Park", new List<int> { 10, 9, 8 });
 dictBand.Add("Foo Fighters", new List<int>());
 
 
@@ -125,6 +125,15 @@ void RatingBand()
 
     if(dictBand.ContainsKey(nameBand))
     {
+        Console.Write("What rating does the band deserve: ");
+        int rate = int.Parse(Console.ReadLine()!);
+
+        dictBand[nameBand].Add(rate);
+
+        Console.WriteLine($"\nThe rating {rate} was succesfully made");
+
+        Thread.Sleep(4000);
+        ShowOptionMenu();
 
     }
     else
