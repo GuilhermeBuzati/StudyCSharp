@@ -12,4 +12,7 @@ music2.Duration = 223;
 albumColdplay.AddMusic(music1);
 albumColdplay.AddMusic(music2);
 
-albumColdplay.ShowMusicsInAlbum();
+Band coldplay = new Band();
+coldplay.Name = "Coldplay";
+coldplay.AddAlbum(albumColdplay);
+coldplay.ShowDiscography();
