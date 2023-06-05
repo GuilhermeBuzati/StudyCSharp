@@ -70,7 +70,7 @@ void ShowOptionMenu() {
 void CreateBand()
 {
     Console.Clear();
-    Console.WriteLine("Band record");
+    ShowOptionTitle("Band record");
     Console.Write("Write the name of the band you want to record: ");
     string nameBand = Console.ReadLine()!;
     listBands.Add(nameBand);
@@ -85,9 +85,8 @@ void CreateBand()
 void ShowRegisteredBands(){
 
     Console.Clear();
-    Console.WriteLine("************************* ");
-    Console.WriteLine("Showing registered bands! ");
-    Console.WriteLine("************************* \n");
+
+    ShowOptionTitle("Showing registered bands!");
 
     //for (int i = 0; i < listBands.Count; i++)
     //{
@@ -105,6 +104,17 @@ void ShowRegisteredBands(){
 
 
 }   
+
+void ShowOptionTitle(string title)
+{
+    int quantityLetters = title.Length;
+
+    string asterisks = string.Empty.PadLeft(quantityLetters, '*');
+
+    Console.WriteLine(asterisks);
+    Console.WriteLine(title);
+    Console.WriteLine(asterisks + "\n");
+}
 
 ShowOptionMenu();
 
