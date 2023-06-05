@@ -1,16 +1,22 @@
 ﻿class Music
 {
-    public string name;
-    public string artist;
-    public int duration;
-    public bool available { get; set; }
+    //digite prop + tab (atalho para criação de atributo)
+    public string Name { get; set; }
+
+    public string Artist { get; set; }
+
+    public int Duration { get; set; }
+
+    public bool Available { get; set; }
+
+    public string FullName { get; set; }
 
     public void ShowDataSheet()
     {
-        Console.WriteLine($"Name: {name}");
-        Console.WriteLine($"Artist: {artist}");
-        Console.WriteLine($"Duration: {duration}");
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Artist: {Artist}");
+        Console.WriteLine($"Duration: {Duration}");
 
-        if (available) Console.WriteLine($"Available"); else Console.WriteLine("Not Available");
+        if (Available) Console.WriteLine($"Available"); else Console.WriteLine("Not Available");
     }
 }
