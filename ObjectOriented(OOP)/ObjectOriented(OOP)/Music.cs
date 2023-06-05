@@ -1,9 +1,9 @@
 ﻿class Music
 {
-    public string name;
-    public string artist;
-    public int duration;
-    public bool available;
+    private string name;
+    private string artist;
+    private int duration;
+    private bool available;
 
     public void ShowDataSheet()
     {
