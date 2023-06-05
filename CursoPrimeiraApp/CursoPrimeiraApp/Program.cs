@@ -58,7 +58,7 @@ void ShowOptionMenu() {
             ShowRegisteredBands();
             break;
         case 3:
-            Console.WriteLine("Você escolheu a opção " + optionNumber);
+            RatingBand();
             break;
         case 4:
             Console.WriteLine("Você escolheu a opção " + optionNumber);
@@ -113,6 +113,28 @@ void ShowOptionTitle(string title)
     Console.WriteLine(asterisks);
     Console.WriteLine(title);
     Console.WriteLine(asterisks + "\n");
+}
+
+void RatingBand()
+{
+    Console.Clear();
+    ShowOptionTitle("Rate band");
+
+    Console.Write("Write the name of the band you want to rate: ");
+    string nameBand = Console.ReadLine();
+
+    if(dictBand.ContainsKey(nameBand))
+    {
+
+    }
+    else
+    {
+        Console.WriteLine($"The band {nameBand} not exists!");
+        Console.WriteLine("Press any key to return at main menu");
+        Console.ReadKey();
+        ShowOptionMenu();
+
+    }
 }
 
 ShowOptionMenu();
