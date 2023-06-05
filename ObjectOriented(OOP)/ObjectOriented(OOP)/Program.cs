@@ -1,18 +1,12 @@
-﻿Music music1 = new Music();
+﻿Album albumColdplay = new Album();
+albumColdplay.Name = "Music of the Spheres";
 
-music1.Name = "Lost";
-music1.Artist = "Linkin Park";
-music1.Duration = 240;
-music1.Available = true;
-
-Console.WriteLine(music1.Resume);
+Music music1 = new Music();
+music1.Name = "High Power";
 
 Music music2 = new Music();
+music2.Name = "My Universe";
 
-music2.Name = "Paradise";
-music2.Artist = "Coldplay"; 
-music2.Duration = 264;
-music2.Available = false;
 
-music1.ShowDataSheet();
-music2.ShowDataSheet();
+albumColdplay.AddMusic(music1);
+albumColdplay.AddMusic(music2);
