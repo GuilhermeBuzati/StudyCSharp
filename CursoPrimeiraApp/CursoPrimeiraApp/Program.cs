@@ -1,8 +1,10 @@
 ﻿//Screen Sound
 
 string messageWelcome = "Welcome to Screen Sound";
-//List<string> listBands = new List<string>();
 List<string> listBands = new List<string>{ "Coldplay", "Linkin Park"};
+
+//Creating dictionary
+Dictionary<string, List<int>> dictBand = new Dictionary<string, List<int>>();
 
 void ShowMessageWelcome() {
 
@@ -101,7 +103,6 @@ void ShowRegisteredBands(){
     //ReadKey = Press any key to return at main menu
     Console.ReadKey();
     ShowOptionMenu();
-
 
 }   
 
