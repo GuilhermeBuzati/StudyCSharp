@@ -1,19 +1,9 @@
 ﻿class Music
 {
-    private string name;
-    private string artist;
-    private int duration;
-    private bool available;
-
-    public void WriteAvailable(bool value)
-    {
-        available = value;
-    }
-
-    public bool ReadAvailable() 
-    { 
-        return available; 
-    }
+    public string name;
+    public string artist;
+    public int duration;
+    public bool available { get; set; }
 
     public void ShowDataSheet()
     {
