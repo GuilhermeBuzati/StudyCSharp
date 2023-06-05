@@ -2,13 +2,15 @@
 
 music1.name = "Lost";
 music1.artist = "Linkin Park";
-
-Console.WriteLine($"Name: {music1.name}");
-Console.WriteLine($"Artist: {music1.artist}");
+music1.duration = 240;
+music1.available = true;
 
 Music music2 = new Music();
 music2.name = "Paradise";
 music2.artist = "Coldplay";
+music2.duration = 264;
+music2.available = false;
 
-Console.WriteLine($"Name: {music2.name}");
-Console.WriteLine($"Artist: {music2.artist}");
+
+music1.ShowDataSheet();
+music2.ShowDataSheet();
