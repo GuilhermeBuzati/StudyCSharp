@@ -61,7 +61,7 @@ void ShowOptionMenu() {
             RatingBand();
             break;
         case 4:
-            Console.WriteLine("Você escolheu a opção " + optionNumber);
+            AverageRatingBand();
             break;
         case -1:
             Console.WriteLine("Goodbye =)");
@@ -144,6 +144,44 @@ void RatingBand()
         ShowOptionMenu();
 
     }
+}
+
+void AverageRatingBand()
+{
+    Console.Clear();
+    ShowOptionTitle("Average rating band");
+
+    Console.Write("Write name of the band you want to see average: ");
+    string nameBand= Console.ReadLine();
+
+    if (dictBand.ContainsKey(nameBand))
+    {
+        if (dictBand[nameBand].Count > 0)
+        {
+            Console.WriteLine(dictBand[nameBand].Average());
+
+            Console.WriteLine("Press any key to return at main menu");
+            Console.ReadKey();
+            ShowOptionMenu();
+        }
+        else
+        {
+            Console.WriteLine($"The band {nameBand} not exists ratings!");
+            Console.WriteLine("Press any key to return at main menu");
+            Console.ReadKey();
+            ShowOptionMenu();
+
+        }
+
+    }
+    else
+    {
+        Console.WriteLine($"The band {nameBand} not exists!");
+        Console.WriteLine("Press any key to return at main menu");
+        Console.ReadKey();
+        ShowOptionMenu();
+    }
+
 }
 
 ShowOptionMenu();
