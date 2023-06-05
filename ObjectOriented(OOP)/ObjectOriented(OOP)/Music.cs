@@ -1,7 +1,7 @@
 ﻿class Music
 {
-    string name;
-    string artist;
-    int duration;
-    bool available;
+    public string name;
+    public string artist;
+    public int duration;
+    public bool available;
 }
