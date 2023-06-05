@@ -1,0 +1,15 @@
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\bin\Debug\net7.0\CursoPrimeiraApp.exe
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\bin\Debug\net7.0\CursoPrimeiraApp.deps.json
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\bin\Debug\net7.0\CursoPrimeiraApp.runtimeconfig.json
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\bin\Debug\net7.0\CursoPrimeiraApp.dll
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\bin\Debug\net7.0\CursoPrimeiraApp.pdb
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.csproj.AssemblyReference.cache
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.AssemblyInfoInputs.cache
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.AssemblyInfo.cs
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.csproj.CoreCompileInputs.cache
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.dll
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\refint\CursoPrimeiraApp.dll
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.pdb
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\CursoPrimeiraApp.genruntimeconfig.cache
+C:\Users\Guilh\Documents\GitHub\CursoPrimeiraApp\CursoPrimeiraApp\obj\Debug\net7.0\ref\CursoPrimeiraApp.dll
