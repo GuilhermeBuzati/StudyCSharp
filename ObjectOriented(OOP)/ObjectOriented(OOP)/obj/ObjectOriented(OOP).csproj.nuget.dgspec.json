@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Guilh\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj": {}
+    "C:\\Users\\guilherme.leopoldino\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj": {}
   },
   "projects": {
-    "C:\\Users\\Guilh\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj": {
+    "C:\\Users\\guilherme.leopoldino\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guilh\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj",
+        "projectUniqueName": "C:\\Users\\guilherme.leopoldino\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj",
         "projectName": "ObjectOriented(OOP)",
-        "projectPath": "C:\\Users\\Guilh\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj",
-        "packagesPath": "C:\\Users\\Guilh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guilh\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\obj\\",
+        "projectPath": "C:\\Users\\guilherme.leopoldino\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\ObjectOriented(OOP).csproj",
+        "packagesPath": "C:\\Users\\guilherme.leopoldino\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\guilherme.leopoldino\\Documents\\GitHub\\StudyCSharp\\ObjectOriented(OOP)\\ObjectOriented(OOP)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Guilh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\guilherme.leopoldino\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

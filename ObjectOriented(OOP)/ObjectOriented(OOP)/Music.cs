@@ -9,7 +9,7 @@
 
     public bool Available { get; set; }
 
-    public string FullName { get; set; }
+    public string Resume => $"The music {Name} belongs the band {Artist}";
 
     public void ShowDataSheet()
     {
