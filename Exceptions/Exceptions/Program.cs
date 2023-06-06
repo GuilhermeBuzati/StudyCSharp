@@ -1,4 +1,7 @@
 ﻿
+using Exceptions;
+
+double amount = 100;
 void CreateAccount()
 {
     Console.WriteLine("Type account: ");
@@ -8,15 +11,42 @@ void CreateAccount()
 
 }
 
+void DebitAmount(double toDebit)
+{
+    if (toDebit <= amount)
+    {
+        amount -= toDebit;
+    }
+    else
+    {
+        throw new NotAmountException("Insufficient amount to complemente the action!");
+    }
+    
+
+}
+
+void GetAmount()
+{
+    Console.WriteLine($"Your amount is : {amount}");
+}
+
 
 try
 {
-    CreateAccount();
+    DebitAmount(50);
+    GetAmount();
+    DebitAmount(150);
+    GetAmount();
 
 }
 catch (ArgumentException ex) 
 {
     Console.WriteLine("Error param: " + ex.ParamName);
     Console.WriteLine("It is not possible create account less than zero");
+    Console.WriteLine(ex.Message);
+}
+catch (NotAmountException ex)
+{
+    Console.WriteLine("Amount insufficient");
     Console.WriteLine(ex.Message);
 }
