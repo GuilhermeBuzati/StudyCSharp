@@ -22,6 +22,7 @@ namespace Exception
         public string ReadNextLine()
         {
             Console.WriteLine("Reading line. . .");
+            throw new IOException();
 
             return "Line of file";
         }

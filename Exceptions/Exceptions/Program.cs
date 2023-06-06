@@ -32,7 +32,16 @@ void GetAmount()
 }
 
 
-ReadFile file = new ReadFile("contas.txt");
-file.ReadNextLine();
-file.ReadNextLine();
-file.Close();
+try
+{
+
+    ReadFile file = new ReadFile("contas.txt");
+    file.ReadNextLine();
+    file.ReadNextLine();
+    file.Close();
+}
+catch (IOException)
+{
+    Console.WriteLine("Error reading file");
+
+}
