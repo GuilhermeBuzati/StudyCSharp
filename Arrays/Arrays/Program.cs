@@ -68,6 +68,13 @@ void TestArrayAccount()
     listAccount.Add(new Account(876, "603033"));
     listAccount.Add(new Account(876, "203930"));
 
+    var accountExample = new Account(923, "12832-X");
+
+    listAccount.Add(accountExample);
+    listAccount.ShowList();
+    listAccount.Delete(accountExample);
+    listAccount.ShowList();
+
 }
 
 TestArrayAccount();

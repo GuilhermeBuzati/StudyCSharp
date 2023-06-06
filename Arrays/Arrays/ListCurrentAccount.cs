@@ -44,5 +44,43 @@ namespace Arrays
 
             _items = newArray;
         }
+
+        public void Delete(Account account)
+        {
+            int indexItem = -1;
+
+            for(int i = 0; i < _nextIndex; i++)
+            {
+                Account accountActual = _items[i];
+
+                if(accountActual == account)
+                {
+                    indexItem = i; 
+                    break;
+                }
+            }
+
+            for(int i = indexItem; i < _nextIndex-1; i++) {
+
+                _items[i] = _items[i + 1];
+            }
+
+            _nextIndex--;
+            _items[_nextIndex] = null;
+        }
+
+        public void ShowList()
+        {
+            Console.WriteLine("=======================");
+            for (int i = 0; i< _items.Length;i++)
+            {
+                if (_items[i] != null)
+                {
+                    var account = _items[i];
+                    Console.WriteLine($"Index[{i}] = Account: {account.number_account}");
+
+                }
+            }
+        }
     }
 }
