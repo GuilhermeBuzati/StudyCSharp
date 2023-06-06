@@ -54,4 +54,10 @@ void TestMediana(Array array)
 
 }
 
-TestMediana(demo);
+
+int[] values = { 10, 58, 36, 47 };
+
+for(int i = 0; i < 5; i++)
+{
+    Console.WriteLine(values[i]);
+}
