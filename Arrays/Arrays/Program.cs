@@ -1,23 +1,27 @@
-﻿int[] ages = new int[5];
-
-ages[0] = 30;
-ages[1] = 40;
-ages[2] = 17;
-ages[3] = 18;
-ages[4] = 21;
-
-Console.WriteLine($"Length array {ages.Length}");
-
-
-int totalAge = 0;
-for(int i = 0; i < ages.Length; i++)
+﻿
+void TestSearchWord()
 {
-    int age = ages[i];
-    Console.WriteLine($"Index [{i}] = {age}");
+    string[] arrayWords = new string[5];
+    
+    for(int i = 0; i < arrayWords.Length; i++)
+    {
+        Console.Write($"Type {i+1}º Word: ");
 
-    totalAge += age;
+        arrayWords[i] = Console.ReadLine()!;
+    }
+
+    Console.WriteLine("Type word to search: ");
+    var search = Console.ReadLine();
+
+    foreach(string word in arrayWords)
+    {
+        if (word.Equals(search))
+        {
+            Console.WriteLine($"Word founded: {search}");
+            
+            break;
+        }
+    }
 }
 
-int average = totalAge / ages.Length;
-
-Console.WriteLine($"Average age {average}");
+TestSearchWord();
