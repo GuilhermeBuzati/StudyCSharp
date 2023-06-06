@@ -24,4 +24,34 @@ void TestSearchWord()
     }
 }
 
-TestSearchWord();
+
+Array demo = Array.CreateInstance(typeof(double), 5);
+
+demo.SetValue(5.9, 0);
+demo.SetValue(1.8, 1);
+demo.SetValue(7.1, 2);
+demo.SetValue(10, 3);
+demo.SetValue(6.9, 4);
+
+//[5.9][1.8][7.1][10][6.9]
+
+void TestMediana(Array array)
+{
+    if((array == null) || (array.Length == 0))
+    {
+        Console.WriteLine("Array is empty");
+    }
+
+    double[] orderNumbers = (double[]) array.Clone();
+    Array.Sort(orderNumbers);
+    //[1.8][5.9][6.9][7.1][10]  
+
+    int length = orderNumbers.Length;
+    int mid = length / 2;
+    double mediana = (length % 2 != 0) ? orderNumbers[mid] : (orderNumbers[mid] + orderNumbers[mid - 1]) / 2;
+
+    Console.WriteLine($"Mediana = {mediana}");
+
+}
+
+TestMediana(demo);
