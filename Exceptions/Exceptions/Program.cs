@@ -33,16 +33,14 @@ void GetAmount()
 
 try
 {
-    DebitAmount(50);
-    GetAmount();
-    DebitAmount(150);
-    GetAmount();
+    CreateAccount();
 
 }
 catch (ArgumentException ex) 
 {
     Console.WriteLine("Error param: " + ex.ParamName);
     Console.WriteLine("It is not possible create account less than zero");
+    Console.WriteLine(ex.StackTrace);
     Console.WriteLine(ex.Message);
 }
 catch (NotAmountException ex)

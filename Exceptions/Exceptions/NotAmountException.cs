@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exceptions
 {
-    public class NotAmountException : Exception
+    public class NotAmountException : OperationFinanceException
     {
         public NotAmountException(string message) : base(message) { }
             
