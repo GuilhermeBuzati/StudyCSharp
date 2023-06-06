@@ -1,4 +1,6 @@
 ﻿
+using Arrays;
+
 void TestSearchWord()
 {
     string[] arrayWords = new string[5];
@@ -54,10 +56,21 @@ void TestMediana(Array array)
 
 }
 
-
-int[] values = { 10, 58, 36, 47 };
-
-for(int i = 0; i < 5; i++)
+void TestArrayAccount()
 {
-    Console.WriteLine(values[i]);
+
+    Account[] listAccount = new Account[]
+    {
+        new Account(874, "129121"),
+        new Account(875, "421323"),
+        new Account(876, "888392")
+    };
+
+    for(int i = 0; i < listAccount.Length; i++)
+    {
+        Account account = listAccount[i];
+        Console.WriteLine($"Account: {account.number_account}");
+    }
 }
+
+TestArrayAccount();
