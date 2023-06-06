@@ -59,18 +59,15 @@ void TestMediana(Array array)
 void TestArrayAccount()
 {
 
-    Account[] listAccount = new Account[]
-    {
-        new Account(874, "129121"),
-        new Account(875, "421323"),
-        new Account(876, "888392")
-    };
+    ListCurrentAccount listAccount = new ListCurrentAccount();
+    listAccount.Add(new Account(874, "129121"));
+    listAccount.Add(new Account(875, "421323"));
+    listAccount.Add(new Account(876, "888392"));
+    listAccount.Add(new Account(876, "999212"));
+    listAccount.Add(new Account(876, "100002"));
+    listAccount.Add(new Account(876, "603033"));
+    listAccount.Add(new Account(876, "203930"));
 
-    for(int i = 0; i < listAccount.Length; i++)
-    {
-        Account account = listAccount[i];
-        Console.WriteLine($"Account: {account.number_account}");
-    }
 }
 
 TestArrayAccount();
