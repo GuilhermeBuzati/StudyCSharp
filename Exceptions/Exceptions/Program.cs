@@ -1,4 +1,5 @@
 ﻿
+using Exception;
 using Exceptions;
 
 double amount = 100;
@@ -31,20 +32,7 @@ void GetAmount()
 }
 
 
-try
-{
-    CreateAccount();
-
-}
-catch (ArgumentException ex) 
-{
-    Console.WriteLine("Error param: " + ex.ParamName);
-    Console.WriteLine("It is not possible create account less than zero");
-    Console.WriteLine(ex.StackTrace);
-    Console.WriteLine(ex.Message);
-}
-catch (NotAmountException ex)
-{
-    Console.WriteLine("Amount insufficient");
-    Console.WriteLine(ex.Message);
-}
+ReadFile file = new ReadFile("contas.txt");
+file.ReadNextLine();
+file.ReadNextLine();
+file.Close();
