@@ -1,14 +1,21 @@
-﻿double TaxOperation = 0;
-int TotalAccount = 0;
+﻿
+void CreateAccount()
+{
+    Console.WriteLine("Type account: ");
+    int account = int.Parse(Console.ReadLine()!);
+
+    if (account <= 0 ) throw new ArgumentException("Account must be greater than zero!");
+
+}
 
 
 try
 {
-    TaxOperation = 30 / TotalAccount;
-}
-catch(DivideByZeroException) {
-    Console.WriteLine("Error: Divided by zero!");
-}
+    CreateAccount();
 
-
-Console.WriteLine(TaxOperation);
+}
+catch (ArgumentException ex) 
+{
+    Console.WriteLine("It is not possible create account less than zero");
+    Console.WriteLine(ex.Message);
+}
