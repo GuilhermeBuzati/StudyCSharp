@@ -31,11 +31,10 @@ void GetAmount()
     Console.WriteLine($"Your amount is : {amount}");
 }
 
-
+ReadFile file = new ReadFile("contas.txt");
 try
 {
 
-    ReadFile file = new ReadFile("contas.txt");
     file.ReadNextLine();
     file.ReadNextLine();
     file.Close();
@@ -44,4 +43,8 @@ catch (IOException)
 {
     Console.WriteLine("Error reading file");
 
+}
+finally
+{
+    file.Close( );
 }
