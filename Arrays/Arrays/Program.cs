@@ -88,7 +88,7 @@ List<Account> _listAccount = new List<Account>(){
         BalanceInitital = 900,
         CPF = "123"
     },
-    new Account(2, "1321-X")
+    new Account(1, "1321-X")
     {
         BalanceInitital = 200,
         CPF = "321"
@@ -295,7 +295,7 @@ void SearchAccount()
     Console.WriteLine("===     Search Account      ===");
     Console.WriteLine("===============================");
     Console.WriteLine("\n");
-    Console.Write("Do you want to search by (1) number account or (2) CPF? ");
+    Console.Write("Do you want to search by (1) number account or (2) CPF or (3) number agency? ");
     switch (int.Parse(Console.ReadLine()))
     {
         case 1:
@@ -316,7 +316,32 @@ void SearchAccount()
                 Console.ReadKey();
                 break;
             }
+        case 3:
+            {
+                Console.Write("Type the agency: ");
+                int _agency = int.Parse(Console.ReadLine());
+                var accountByAgency = SearchByAgency(_agency);
+                ShowListAccount(accountByAgency);
+                Console.ReadKey();
+                break;
+            }
     }
+}
+
+void ShowListAccount(List<Account> accountByAgency)
+{
+    if(accountByAgency == null)
+    {
+        Console.WriteLine(" ... The query did not return data ... ");
+    }
+    else
+    {
+        foreach(var item in accountByAgency)
+        {
+            Console.WriteLine(item.ToString());
+        }
+    }
+
 }
 
 Account SearchByCPF(string? cpf)
@@ -327,6 +352,16 @@ Account SearchByCPF(string? cpf)
 Account SearchByNumberAccount(string? numberAccount)
 {
     return _listAccount.Where(account => account.NumberAccount == numberAccount).FirstOrDefault();
+}
+
+List<Account> SearchByAgency(int? _agency)
+{
+    var query = (
+            from account in _listAccount
+            where account.AgencyId == _agency
+            select account).ToList();
+
+    return query;
 }
 
 
