@@ -86,14 +86,17 @@ List<Account> _listAccount = new List<Account>(){
     new Account(1, "1235-2")
     {
         BalanceInitital = 900,
+        CPF = "123"
     },
     new Account(2, "1321-X")
     {
         BalanceInitital = 200,
+        CPF = "321"
     },
     new Account(3, "10912-1")
     {
         BalanceInitital = 50,
+        CPF = "012"
     },
 
 };
@@ -172,7 +175,11 @@ void SupportClient()
                     RemoveAccount();
                     break;
                 case '4':
-                    OrderAccount();
+                    //OrderAccount();
+                    Console.WriteLine("Guilherme from future working on that");
+                    break;
+                case '5':
+                    SearchAccount();
                     break;
             }
         }
@@ -283,6 +290,67 @@ void OrderAccount()
     Console.WriteLine("... List of order account ...");
     Console.ReadKey();
 }
+
+void SearchAccount()
+{
+    Console.Clear();
+    Console.WriteLine("===============================");
+    Console.WriteLine("===     Search Account      ===");
+    Console.WriteLine("===============================");
+    Console.WriteLine("\n");
+    Console.Write("Do you want to search by (1) number account or (2) CPF? ");
+    switch (int.Parse(Console.ReadLine()))
+    {
+        case 1:
+            {
+                Console.Write("Type the number account: ");
+                string _numberAccount = Console.ReadLine();
+                Account account = SearchByNumberAccount(_numberAccount);
+                Console.WriteLine(account.ToString());
+                Console.ReadKey();
+                break;
+            }
+        case 2:
+            {
+                Console.Write("Type the CPF: ");
+                string _cpf = Console.ReadLine();
+                Account account = SearchByCPF(_cpf);
+                Console.WriteLine(account.ToString());
+                Console.ReadKey();
+                break;
+            }
+    }
+}
+
+Account SearchByCPF(string? cpf)
+{
+    Account account = null;
+
+    for(int i = 0;i < _listAccount.Count;i++)
+    {
+        if (_listAccount[i].CPF == cpf) { 
+            account = _listAccount[i]; break;
+        }
+    }
+
+    return account;
+}
+
+Account SearchByNumberAccount(string? numberAccount)
+{
+    Account account = null;
+
+    for (int i = 0; i < _listAccount.Count; i++)
+    {
+        if (_listAccount[i].NumberAccount == numberAccount)
+        {
+            account = _listAccount[i]; break;
+        }
+    }
+
+    return account;
+}
+
 
 #region Examples Methods List
 //Console.WriteLine("Method AddRange and Inverse");
