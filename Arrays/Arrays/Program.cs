@@ -1,6 +1,8 @@
 ﻿
 using Arrays;
+using System.Collections;
 
+#region Example Arrays
 void TestSearchWord()
 {
     string[] arrayWords = new string[5];
@@ -25,7 +27,6 @@ void TestSearchWord()
         }
     }
 }
-
 
 Array demo = Array.CreateInstance(typeof(double), 5);
 
@@ -79,5 +80,98 @@ void TestArrayAccount()
     }
 
 }
+#endregion 
 
-TestArrayAccount();
+ArrayList _listAccount = new ArrayList();
+
+SupportClient();
+
+void SupportClient()
+{
+
+    char option = '0';
+
+    while (option != '6')
+    {
+        Console.Clear();
+        Console.WriteLine("===============================");
+        Console.WriteLine("===       Support           ===");
+        Console.WriteLine("===1 - Register Account     ===");
+        Console.WriteLine("===2 - List Account         ===");
+        Console.WriteLine("===3 - Remove Account       ===");
+        Console.WriteLine("===4 - Order Account        ===");
+        Console.WriteLine("===5 - Search Account       ===");
+        Console.WriteLine("===6 - Exit                 ===");
+        Console.WriteLine("===============================");
+        Console.WriteLine("\n\n");
+        Console.Write("Choose option you want to: ");
+        option = Console.ReadLine()[0];
+
+        switch(option)
+        {
+            case '1': CreateAccount();
+                break;
+            case '2': ListAccount();
+                break;
+
+
+        }
+    }
+}
+
+void ListAccount()
+{
+    Console.Clear();
+    Console.WriteLine("=====================");
+    Console.WriteLine("=== List Accounts ===");
+    Console.WriteLine("=====================");
+    Console.WriteLine("\n");
+
+    if(_listAccount.Count <= 0)
+    {
+        Console.WriteLine("... List of Account is empty");
+        Console.ReadKey();
+        return;
+    }
+
+    foreach(Account account in _listAccount) {
+        Console.WriteLine("==== Information of Account ====");
+        Console.WriteLine($"Account Number: {account.number_account}");
+        Console.WriteLine($"Agency Number: {account.agency_id}");
+        Console.WriteLine($"Owner Name: {account.NameClient}");
+        Console.ReadKey();
+    }
+}
+
+void CreateAccount()
+{
+    Console.Clear();
+    Console.WriteLine("===============================");
+    Console.WriteLine("===   REGISTER ACCOUNT    ===");
+    Console.WriteLine("===============================");
+    Console.WriteLine("\n");
+    Console.WriteLine("=== Type info of Account ===");
+    Console.Write("Account Number: ");
+    string numberAccount = Console.ReadLine();
+
+    Console.Write("Agency Number: ");
+    int numberAgency = int.Parse(Console.ReadLine());
+
+    Account account = new Account(numberAgency, numberAccount);
+
+    Console.Write("Type Balance Initial: ");
+    account.BalanceInitital = double.Parse(Console.ReadLine());
+
+    Console.Write("Type name: ");
+    account.NameClient = Console.ReadLine();
+
+    Console.Write("Type CPF: ");
+    account.CPF = Console.ReadLine();
+
+    Console.Write("Type profession: ");
+    account.Profession = Console.ReadLine();
+
+    _listAccount.Add(account);
+    Console.WriteLine("... Account successfully made! ...");
+    Console.ReadKey();
+}
