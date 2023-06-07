@@ -71,9 +71,12 @@ void TestArrayAccount()
     var accountExample = new Account(923, "12832-X");
 
     listAccount.Add(accountExample);
-    listAccount.ShowList();
-    listAccount.Delete(accountExample);
-    listAccount.ShowList();
+
+    for (int i = 0; i < listAccount.Size; i++)
+    {
+        Account account = listAccount[i];
+        Console.WriteLine($"Index [{i}]: {account.number_account}");
+    }
 
 }
 

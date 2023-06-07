@@ -82,5 +82,27 @@ namespace Arrays
                 }
             }
         }
+
+        public Account GetAccountIndex(int index)
+        {
+            if(index < 0  || index >= _nextIndex)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index));
+            }
+
+            return _items[index];
+        }
+
+        public int Size { get {
+                return _nextIndex;
+            } }   
+
+        public Account this[int index]
+        {
+            get
+            {
+                return GetAccountIndex(index);
+            }
+        }
     }
 }
