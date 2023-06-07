@@ -82,7 +82,21 @@ void TestArrayAccount()
 }
 #endregion 
 
-ArrayList _listAccount = new ArrayList();
+List<Account> _listAccount = new List<Account>(){
+    new Account(1, "1235-2")
+    {
+        BalanceInitital = 900,
+    },
+    new Account(2, "1321-X")
+    {
+        BalanceInitital = 200,
+    },
+    new Account(3, "10912-1")
+    {
+        BalanceInitital = 50,
+    },
+
+};
 
 SupportClient();
 
@@ -172,6 +186,21 @@ void CreateAccount()
     account.Profession = Console.ReadLine();
 
     _listAccount.Add(account);
+
     Console.WriteLine("... Account successfully made! ...");
     Console.ReadKey();
+}
+
+Generic<int> test = new Generic<int>();
+test.ShowMessage(10);
+
+Generic<string> test1 = new Generic<string>();
+test1.ShowMessage("Hello World");
+
+public class Generic<T>
+{
+    public void ShowMessage(T t)
+    {
+        Console.WriteLine($"Showing {t}");
+    }
 }

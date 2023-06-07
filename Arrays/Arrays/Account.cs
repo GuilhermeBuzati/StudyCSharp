@@ -10,10 +10,10 @@ namespace Arrays
     {
         public int agency_id { get; }
         public string number_account { get; set; }
-        public double BalanceInitital { get; set; }
-        public string NameClient { get; set; }
-        public string CPF { get; set; }
-        public string Profession { get; set; }
+        public double? BalanceInitital { get; set; }
+        public string? NameClient { get; set; }
+        public string? CPF { get; set; }
+        public string? Profession { get; set; }
 
 
         public Account(int agency, string number) {
