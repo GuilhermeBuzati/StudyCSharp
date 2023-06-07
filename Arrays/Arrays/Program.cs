@@ -168,6 +168,9 @@ void SupportClient()
                 case '2':
                     ListAccount();
                     break;
+                case '3':
+                    RemoveAccount();
+                    break;
             }
         }
     }
@@ -236,6 +239,37 @@ void CreateAccount()
     Console.ReadKey();
 }
 
+void RemoveAccount()
+{
+    Console.Clear();
+    Console.WriteLine("===============================");
+    Console.WriteLine("===      Remove Account     ===");
+    Console.WriteLine("===============================");
+    Console.WriteLine("\n");
+    Console.Write("Type the number account: ");
+    string numberAccount = Console.ReadLine();
+
+    Account account = null;
+    foreach(var item in _listAccount)
+    {
+        if (item.number_account.Equals(numberAccount))
+        {
+            account = item;
+        }
+    }
+
+    if(account != null)
+    {
+        _listAccount.Remove(account);
+        Console.WriteLine("... Account removed from list ...");
+    }
+    else
+    {
+        Console.WriteLine("... Account not founded ...");
+    }
+
+    Console.ReadKey();
+}
 
 #region Examples Methods List
 //Console.WriteLine("Method AddRange and Inverse");
