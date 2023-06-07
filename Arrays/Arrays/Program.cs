@@ -207,10 +207,7 @@ void ListAccount()
     }
 
     foreach(Account account in _listAccount) {
-        Console.WriteLine("==== Information of Account ====");
-        Console.WriteLine($"Account Number: {account.NumberAccount}");
-        Console.WriteLine($"Agency Number: {account.AgencyId}");
-        Console.WriteLine($"Owner Name: {account.NameClient}");
+        Console.WriteLine(account.ToString());
         Console.ReadKey();
     }
 }
@@ -324,31 +321,12 @@ void SearchAccount()
 
 Account SearchByCPF(string? cpf)
 {
-    Account account = null;
-
-    for(int i = 0;i < _listAccount.Count;i++)
-    {
-        if (_listAccount[i].CPF == cpf) { 
-            account = _listAccount[i]; break;
-        }
-    }
-
-    return account;
+    return _listAccount.Where(account => account.CPF == cpf).FirstOrDefault();
 }
 
 Account SearchByNumberAccount(string? numberAccount)
 {
-    Account account = null;
-
-    for (int i = 0; i < _listAccount.Count; i++)
-    {
-        if (_listAccount[i].NumberAccount == numberAccount)
-        {
-            account = _listAccount[i]; break;
-        }
-    }
-
-    return account;
+    return _listAccount.Where(account => account.NumberAccount == numberAccount).FirstOrDefault();
 }
 
 
