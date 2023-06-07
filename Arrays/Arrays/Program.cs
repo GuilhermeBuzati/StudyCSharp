@@ -133,35 +133,49 @@ List<Account> _listAccount3 = new List<Account>(){
 
 void SupportClient()
 {
-
-    char option = '0';
-
-    while (option != '6')
+    try
     {
-        Console.Clear();
-        Console.WriteLine("===============================");
-        Console.WriteLine("===       Support           ===");
-        Console.WriteLine("===1 - Register Account     ===");
-        Console.WriteLine("===2 - List Account         ===");
-        Console.WriteLine("===3 - Remove Account       ===");
-        Console.WriteLine("===4 - Order Account        ===");
-        Console.WriteLine("===5 - Search Account       ===");
-        Console.WriteLine("===6 - Exit                 ===");
-        Console.WriteLine("===============================");
-        Console.WriteLine("\n\n");
-        Console.Write("Choose option you want to: ");
-        option = Console.ReadLine()[0];
+        char option = '0';
 
-        switch(option)
+        while (option != '6')
         {
-            case '1': CreateAccount();
-                break;
-            case '2': ListAccount();
-                break;
+            Console.Clear();
+            Console.WriteLine("===============================");
+            Console.WriteLine("===       Support           ===");
+            Console.WriteLine("===1 - Register Account     ===");
+            Console.WriteLine("===2 - List Account         ===");
+            Console.WriteLine("===3 - Remove Account       ===");
+            Console.WriteLine("===4 - Order Account        ===");
+            Console.WriteLine("===5 - Search Account       ===");
+            Console.WriteLine("===6 - Exit                 ===");
+            Console.WriteLine("===============================");
+            Console.WriteLine("\n\n");
+            Console.Write("Choose option you want to: ");
 
+            try
+            {
+                option = Console.ReadLine()[0];
+            }catch(Exception ex)
+            {
+                throw new HandlerException(ex.Message);
+            }
 
+            switch (option)
+            {
+                case '1':
+                    CreateAccount();
+                    break;
+                case '2':
+                    ListAccount();
+                    break;
+            }
         }
     }
+    catch (HandlerException ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+    
 }
 
 void ListAccount()
@@ -223,33 +237,35 @@ void CreateAccount()
 }
 
 
-Console.WriteLine("Method AddRange and Inverse");
+#region Examples Methods List
+//Console.WriteLine("Method AddRange and Inverse");
 
-_listAccount2.AddRange(_listAccount3);
-_listAccount2.Reverse();
+//_listAccount2.AddRange(_listAccount3);
+//_listAccount2.Reverse();
 
-for (int i = 0; i < _listAccount2.Count; i++)
-{
-    Console.WriteLine($"Index[{i}] = Account [{_listAccount2[i].number_account}]");
-}
+//for (int i = 0; i < _listAccount2.Count; i++)
+//{
+//    Console.WriteLine($"Index[{i}] = Account [{_listAccount2[i].number_account}]");
+//}
 
-Console.WriteLine("\n\nMethod GetRange");
+//Console.WriteLine("\n\nMethod GetRange");
 
-var range = _listAccount3.GetRange(0, 1);
+//var range = _listAccount3.GetRange(0, 1);
 
-for(int i = 0; i < range.Count; i++)
-{
-    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
-}
+//for(int i = 0; i < range.Count; i++)
+//{
+//    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
+//}
 
-Console.WriteLine("\n\nMethod Clear");
+//Console.WriteLine("\n\nMethod Clear");
 
-_listAccount3.Clear();
+//_listAccount3.Clear();
 
-for (int i = 0; i < _listAccount3.Count; i++)
-{
-    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
-}
+//for (int i = 0; i < _listAccount3.Count; i++)
+//{
+//    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
+//}
+#endregion
 
 
-Console.ReadKey();
+SupportClient();
