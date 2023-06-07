@@ -77,7 +77,7 @@ namespace Arrays
                 if (_items[i] != null)
                 {
                     var account = _items[i];
-                    Console.WriteLine($"Index[{i}] = Account: {account.number_account}");
+                    Console.WriteLine($"Index[{i}] = Account: {account.NumberAccount}");
 
                 }
             }

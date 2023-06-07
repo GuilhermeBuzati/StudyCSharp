@@ -76,7 +76,7 @@ void TestArrayAccount()
     for (int i = 0; i < listAccount.Size; i++)
     {
         Account account = listAccount[i];
-        Console.WriteLine($"Index [{i}]: {account.number_account}");
+        Console.WriteLine($"Index [{i}]: {account.NumberAccount}");
     }
 
 }
@@ -171,6 +171,9 @@ void SupportClient()
                 case '3':
                     RemoveAccount();
                     break;
+                case '4':
+                    OrderAccount();
+                    break;
             }
         }
     }
@@ -198,8 +201,8 @@ void ListAccount()
 
     foreach(Account account in _listAccount) {
         Console.WriteLine("==== Information of Account ====");
-        Console.WriteLine($"Account Number: {account.number_account}");
-        Console.WriteLine($"Agency Number: {account.agency_id}");
+        Console.WriteLine($"Account Number: {account.NumberAccount}");
+        Console.WriteLine($"Agency Number: {account.AgencyId}");
         Console.WriteLine($"Owner Name: {account.NameClient}");
         Console.ReadKey();
     }
@@ -252,7 +255,7 @@ void RemoveAccount()
     Account account = null;
     foreach(var item in _listAccount)
     {
-        if (item.number_account.Equals(numberAccount))
+        if (item.NumberAccount.Equals(numberAccount))
         {
             account = item;
         }
@@ -271,6 +274,16 @@ void RemoveAccount()
     Console.ReadKey();
 }
 
+void OrderAccount()
+{
+    //To order list, you need to implement interface IComparable at Account class. In my case, didn't work to implement =( Bug on IDE;
+    //Guilherme from future, you'll can solve that
+    //error CS0535: 'Account' does not implement interface member 'IComparable<Account>.CompareTo(Account?)'
+    _listAccount.Sort();
+    Console.WriteLine("... List of order account ...");
+    Console.ReadKey();
+}
+
 #region Examples Methods List
 //Console.WriteLine("Method AddRange and Inverse");
 
@@ -279,7 +292,7 @@ void RemoveAccount()
 
 //for (int i = 0; i < _listAccount2.Count; i++)
 //{
-//    Console.WriteLine($"Index[{i}] = Account [{_listAccount2[i].number_account}]");
+//    Console.WriteLine($"Index[{i}] = Account [{_listAccount2[i].NumberAccount}]");
 //}
 
 //Console.WriteLine("\n\nMethod GetRange");
@@ -288,7 +301,7 @@ void RemoveAccount()
 
 //for(int i = 0; i < range.Count; i++)
 //{
-//    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
+//    Console.WriteLine($"Index[{i}] = Account [{range[i].NumberAccount}]");
 //}
 
 //Console.WriteLine("\n\nMethod Clear");
@@ -297,7 +310,7 @@ void RemoveAccount()
 
 //for (int i = 0; i < _listAccount3.Count; i++)
 //{
-//    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
+//    Console.WriteLine($"Index[{i}] = Account [{range[i].NumberAccount}]");
 //}
 #endregion
 

@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Arrays
-{
-    public class Account
+    public class Account : IComparable<Account>
     {
-        public int agency_id { get; }
-        public string number_account { get; set; }
+        public int AgencyId { get; }
+        public string NumberAccount { get; set; }
         public double? BalanceInitital { get; set; }
         public string? NameClient { get; set; }
         public string? CPF { get; set; }
@@ -18,8 +16,19 @@ namespace Arrays
 
         public Account(int agency, string number) {
 
-            agency_id =  agency; 
-            number_account = number;
+            AgencyId =  agency; 
+            NumberAccount = number;
+        }
+
+        public int CompareTO(Account? other)
+        {
+            if(other == null)
+            {
+                return 1;
+            }
+            else
+            {
+                return this.AgencyId.CompareTo(other.AgencyId); 
+            }
         }
     }
-}
