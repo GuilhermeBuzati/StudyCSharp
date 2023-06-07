@@ -181,6 +181,12 @@ void SupportClient()
                 case '5':
                     SearchAccount();
                     break;
+                case '6':
+                    ExitSupport();
+                    break;
+                default:
+                    Console.WriteLine("Option unavailable");
+                    break;
             }
         }
     }
@@ -189,6 +195,13 @@ void SupportClient()
         Console.WriteLine(ex.Message);
     }
     
+}
+
+void ExitSupport()
+{
+    Console.WriteLine("... Leaving supporte ...");
+    Console.WriteLine("...     Goodbye =)   ...");
+    Console.ReadKey();
 }
 
 void ListAccount()
