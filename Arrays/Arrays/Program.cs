@@ -98,7 +98,38 @@ List<Account> _listAccount = new List<Account>(){
 
 };
 
-SupportClient();
+List<Account> _listAccount2 = new List<Account>(){
+    new Account(1, "1235-A")
+    {
+        BalanceInitital = 900,
+    },
+    new Account(2, "1321-B")
+    {
+        BalanceInitital = 200,
+    },
+    new Account(3, "10912-C")
+    {
+        BalanceInitital = 50,
+    },
+
+};
+
+List<Account> _listAccount3 = new List<Account>(){
+    new Account(1, "1235-D")
+    {
+        BalanceInitital = 900,
+    },
+    new Account(2, "1321-E")
+    {
+        BalanceInitital = 200,
+    },
+    new Account(3, "10912-F")
+    {
+        BalanceInitital = 50,
+    },
+
+};
+
 
 void SupportClient()
 {
@@ -191,16 +222,34 @@ void CreateAccount()
     Console.ReadKey();
 }
 
-Generic<int> test = new Generic<int>();
-test.ShowMessage(10);
 
-Generic<string> test1 = new Generic<string>();
-test1.ShowMessage("Hello World");
+Console.WriteLine("Method AddRange and Inverse");
 
-public class Generic<T>
+_listAccount2.AddRange(_listAccount3);
+_listAccount2.Reverse();
+
+for (int i = 0; i < _listAccount2.Count; i++)
 {
-    public void ShowMessage(T t)
-    {
-        Console.WriteLine($"Showing {t}");
-    }
+    Console.WriteLine($"Index[{i}] = Account [{_listAccount2[i].number_account}]");
 }
+
+Console.WriteLine("\n\nMethod GetRange");
+
+var range = _listAccount3.GetRange(0, 1);
+
+for(int i = 0; i < range.Count; i++)
+{
+    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
+}
+
+Console.WriteLine("\n\nMethod Clear");
+
+_listAccount3.Clear();
+
+for (int i = 0; i < _listAccount3.Count; i++)
+{
+    Console.WriteLine($"Index[{i}] = Account [{range[i].number_account}]");
+}
+
+
+Console.ReadKey();
