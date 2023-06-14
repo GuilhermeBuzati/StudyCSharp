@@ -5,67 +5,32 @@ namespace EntityFramework
     {
         static void Main(string[] args)
         {
-            RemoveProduct();
-            RecordUsingEntity();
-            GetListProduct();
-            UpdateProduct();
-        }
-
-        private static void UpdateProduct()
-        {
-            GetListProduct();
-
-            using (var context = new ProductDAOEntity())
+            using(var context = new StoreContext())
             {
-                Product product = context.Products().First();
-                product.Name = "Product updated!";
-                context.Update(product);
-            }
+                var products = context.Products.ToList();
 
-            GetListProduct();
-        }
-
-        private static void RemoveProduct()
-        {
-            using (var context = new ProductDAOEntity())
-            {
-                IList<Product> products = context.Products();
-
-                foreach(Product product in products)
+                foreach(var product in products)
                 {
-                    context.Delete(product);
+                    Console.WriteLine(product);
+                }
+
+                foreach(var e in context.ChangeTracker.Entries())
+                {
+                    Console.WriteLine(e.State);
+                }
+
+                var product1 = products.Last();
+                product1.Name = "Teste de Livros";
+
+                //context.SaveChanges();
+
+                foreach (var e in context.ChangeTracker.Entries())
+                {
+                    Console.WriteLine(e.State);
                 }
 
             }
-        }
 
-        private static void GetListProduct()
-        {
-            using (var context = new ProductDAOEntity())
-            {
-                IList<Product> products = context.Products();
-                Console.WriteLine("It was found {0} product(s).", products.Count);
-
-                foreach (var item in products)
-                {
-                    Console.WriteLine(item.Name);
-                }
-            }
-        }
-
-        private static void RecordUsingEntity()
-        {
-            Product p = new Product();
-            p.Name = "Harry Potter e a Ordem da Fênix";
-            p.Category = "Livros";
-            p.Value = 19.89;
-
-            using (var context = new ProductDAOEntity())
-            {
-                context.Add(p);
-            }
-
-            Console.WriteLine("Saved!");
         }
     }
 }

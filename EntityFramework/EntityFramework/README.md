@@ -1,7 +1,12 @@
 <h1 align="center" id="installEntityFramework"> Summary </h1>
 <ol>
     <li> <a href="#installEntityFramework"> How to install Entity Framework </a></li>
-    <li> <a href="#useEntityFramework"> How to use Entity Framework </a></li>
+    <li> <a href="#useEntityFramework"> Entity Framework </a></li>
+        <ul>
+            <li> <a href="#crudEntityFramework"> C.R.U.D </a></li>
+            <li> <a href="#changeTrackerEntityFramework"> ChangeTracker and States </a></li>
+        </ul>
+
 </ol>
 
 
@@ -20,9 +25,7 @@
 	<p> In case, we are installing provider for SqlServer, but you can see all providers <a href="https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli"> here </a> </p>
 
 
-<h1 align="center" id="useEntityFramework"> Methods with EntityFramework</h1>
-
-<h4> Branch: EntityFramework - Commit 23a56900da9f4406772b267df5fe12d63a27d048 </h4>
+<h1 align="center" id="useEntityFramework"> EntityFramework </h1>
 
 <p> Configure application to accept Entity Framework </p>
 
@@ -47,6 +50,10 @@
 
             }
         }
+        
+<h3 align="center" id="crudEntityFramework"> C.R.U.D </h3>
+
+<h4> Branch: EntityFramework - Commit 23a56900da9f4406772b267df5fe12d63a27d048 </h4>
 
 - <p> Now, you can do the CRUD with EntityFramework. </p>
 
@@ -131,3 +138,40 @@
                     context.SaveChanges();
                 }
             }
+
+
+<h3 align="center" id="changeTrackerEntityFramework"> ChangeTracker and States </h3>
+    
+
+    static void Main(string[] args)
+        {
+            using(var context = new StoreContext())
+            {
+                var products = context.Products.ToList();
+
+                foreach(var product in products)
+                {
+                    Console.WriteLine(product);
+                }
+
+                //ChangeTrack is responsible for verify every changes in context, and have a method called Entries than list all entities managed by context
+                foreach(var e in context.ChangeTracker.Entries())
+                {
+                    //Every element in entities (context)
+                    Console.WriteLine(e.State);
+                    //Will return "unchanged"
+                }
+
+                var product1 = products.Last();
+                product1.Name = "Teste de Livros";  
+
+                //After we update attribute from element
+                foreach (var e in context.ChangeTracker.Entries())
+                {
+                    Console.WriteLine(e.State);
+                    //The last element, will return "modified"
+                }
+
+                //Then, entity can manage state of each entity
+            }
+        }    
