@@ -19,6 +19,17 @@ namespace EntityFramework
             order.Product = bread;
             order.Value = bread.CostUnit * order.Quantity;
 
+            using(var context = new StoreContext())
+            {
+                context.Orders.Add(order);
+
+                foreach(var e in context.ChangeTracker.Entries())
+                {
+                    Console.WriteLine(e.Entity.ToString() + " - " + e.State);
+                }
+
+                context.SaveChanges();
+            }
 
 
         }
