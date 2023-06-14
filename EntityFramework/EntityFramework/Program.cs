@@ -6,8 +6,24 @@ namespace EntityFramework
         static void Main(string[] args)
         {
             RecordUsingEntity();
-            GetListProduct();
+            //GetListProduct();
             RemoveProduct();
+            //GetListProduct();
+            UpdateProduct();
+        }
+
+        private static void UpdateProduct()
+        {
+            GetListProduct();
+
+            using (var context = new StoreContext())
+            {
+                Product product = context.Products.First();
+                product.Name = "Product updated!";
+                context.Products.Update(product);
+                context.SaveChanges();
+            }
+
             GetListProduct();
         }
 
