@@ -1,17 +1,25 @@
-﻿using EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Alura.Loja.Testes.ConsoleApp
+﻿
+namespace EntityFramework
 {
     class Program
     {
         static void Main(string[] args)
         {
-            RecordUsingEntity();
+            //RecordUsingEntity();
+            GetListProduct();
+        }
+
+        private static void GetListProduct()
+        {
+            using (var context = new StoreContext())
+            {
+                IList<Product> products = context.Products.ToList();
+
+                foreach (var item in products)
+                {
+                    Console.WriteLine(item.Name);
+                }
+            }
         }
 
         private static void RecordUsingEntity()
@@ -26,6 +34,8 @@ namespace Alura.Loja.Testes.ConsoleApp
                 context.Products.Add(p);
                 context.SaveChanges();
             }
+
+            Console.WriteLine("Saved!");
         }
     }
 }

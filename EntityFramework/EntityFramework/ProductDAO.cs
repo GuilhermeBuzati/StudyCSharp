@@ -14,7 +14,7 @@ namespace EntityFramework
 
         public ProductDAO()
         {
-            this.connection = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=LojaDB;Trusted_Connection=true;");
+            this.connection = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=StoreDB;Trusted_Connection=true;");
             this.connection.Open();
         }
 
