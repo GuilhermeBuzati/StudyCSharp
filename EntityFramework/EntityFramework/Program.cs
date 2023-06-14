@@ -24,9 +24,13 @@ namespace EntityFramework
 
                 ShowEntries(context.ChangeTracker.Entries());
 
-                context.SaveChanges();
+                context.Products.Remove(newProduct);
 
                 ShowEntries(context.ChangeTracker.Entries());
+
+                var entry = context.Entry(newProduct);
+
+                Console.WriteLine("\n\n" + entry.Entity.ToString() + "-" + entry.State) ;
 
             }
 
@@ -34,6 +38,7 @@ namespace EntityFramework
 
         private static void ShowEntries(IEnumerable<EntityEntry> entries)
         {
+            Console.WriteLine("=========================");
             foreach (var e in entries)
             {
                 Console.WriteLine(e.Entity.ToString() + " - " + e.State);
