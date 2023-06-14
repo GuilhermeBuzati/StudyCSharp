@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EntityFramework
 {
-    internal class ProductDAO : IDisposable
+    internal class ProductDAO : IDisposable, IProductDAO
     {
         private SqlConnection connection;
 
@@ -23,7 +23,7 @@ namespace EntityFramework
             this.connection.Close();
         }
 
-        internal void Adicionar(Product p)
+        public void Add(Product p)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace EntityFramework
             }
         }
 
-        internal void Atualizar(Product p)
+        public void Update(Product p)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace EntityFramework
             }
         }
 
-        internal void Remover(Product p)
+        public void Delete(Product p)
         {
             try
             {
@@ -91,7 +91,7 @@ namespace EntityFramework
             }
         }
 
-        internal IList<Product> Products()
+        public IList<Product> Products()
         {
             var lista = new List<Product>();
 

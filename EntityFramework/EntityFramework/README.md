@@ -22,7 +22,7 @@
 
 <h1 align="center" id="useEntityFramework"> Methods with EntityFramework</h1>
 
-<h4> Branch: EntityFramework </h4>
+<h4> Branch: EntityFramework - Commit 23a56900da9f4406772b267df5fe12d63a27d048 </h4>
 
 <p> Configure application to accept Entity Framework </p>
 

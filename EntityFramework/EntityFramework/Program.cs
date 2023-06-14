@@ -5,10 +5,9 @@ namespace EntityFramework
     {
         static void Main(string[] args)
         {
-            RecordUsingEntity();
-            //GetListProduct();
             RemoveProduct();
-            //GetListProduct();
+            RecordUsingEntity();
+            GetListProduct();
             UpdateProduct();
         }
 
@@ -16,12 +15,11 @@ namespace EntityFramework
         {
             GetListProduct();
 
-            using (var context = new StoreContext())
+            using (var context = new ProductDAOEntity())
             {
-                Product product = context.Products.First();
+                Product product = context.Products().First();
                 product.Name = "Product updated!";
-                context.Products.Update(product);
-                context.SaveChanges();
+                context.Update(product);
             }
 
             GetListProduct();
@@ -29,25 +27,24 @@ namespace EntityFramework
 
         private static void RemoveProduct()
         {
-            using (var context = new StoreContext())
+            using (var context = new ProductDAOEntity())
             {
-                IList<Product> products = context.Products.ToList();
+                IList<Product> products = context.Products();
 
                 foreach(Product product in products)
                 {
-                    context.Products.Remove(product);                    
+                    context.Delete(product);
                 }
 
-                context.SaveChanges();
             }
         }
 
         private static void GetListProduct()
         {
-            using (var context = new StoreContext())
+            using (var context = new ProductDAOEntity())
             {
-                IList<Product> products = context.Products.ToList();
-                Console.WriteLine("Foram encontrados {0} produtos(s).", products.Count);
+                IList<Product> products = context.Products();
+                Console.WriteLine("It was found {0} product(s).", products.Count);
 
                 foreach (var item in products)
                 {
@@ -63,10 +60,9 @@ namespace EntityFramework
             p.Category = "Livros";
             p.Value = 19.89;
 
-            using (var context = new StoreContext())
+            using (var context = new ProductDAOEntity())
             {
-                context.Products.Add(p);
-                context.SaveChanges();
+                context.Add(p);
             }
 
             Console.WriteLine("Saved!");
