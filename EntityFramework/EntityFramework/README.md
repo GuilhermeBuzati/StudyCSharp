@@ -142,6 +142,7 @@
 
 <h3 align="center" id="changeTrackerEntityFramework"> ChangeTracker and States </h3>
     
+<h4> Branch: EntityFramework - Commit 442b0e8bb6059b7b392e024d29940bc0317138da </h4>
 
     static void Main(string[] args)
         {
