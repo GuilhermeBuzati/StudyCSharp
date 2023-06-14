@@ -207,3 +207,152 @@
                  context.Products.Remove(newProduct);</br>
                  
     </ul>
+
+
+<h1 align="center" id="installEntityFramework"> How to install Tools Entity FrameWork</h1>
+
+<p> Tools Entity FrameWork will syncronize the class with table in database. So, we do not need update script directly in database, the Tools will do
+this for us </p>
+
+<p> The Class before update </p>
+
+    internal class Product
+    {
+        public int Id { get; internal set; }
+        public string Name { get; internal set; }
+        public string Category { get; internal set; }
+        public double Value { get; internal set; }
+
+        public override string ToString()
+        {
+            return $"Product: {this.Id}, {this.Name}, {this.Category}, {this.Value}";
+        }
+    }
+
+<p> The class conform we want to update </p>
+
+    internal class Product
+    {
+        public int Id { get; internal set; }
+        public string Name { get; internal set; }
+        public string Category { get; internal set; }
+
+        //It was updated this attribute
+        public double CostUnit { get; internal set; }
+
+        //It was added this attribute
+        public string Unit{ get; internal set; }
+
+        public override string ToString()
+        {
+            return $"Product: {this.Id}, {this.Name}, {this.Category}, {this.CostUnit}";
+        }
+    }
+
+<p> Now, to update the table without database, you need follow the topics below </p> 
+
+<p> Open Terminal PMC in </p>
+
+- Tools -> NuGet Package Manager -> Package Manager Console
+
+<p> Type the command </p>
+
+    - Install-Package Microsoft.EntityFrameworkCore.Tools -version 7.0.7
+
+<p> Then, type to create the miggration: </p>
+
+    - Add-Migration "NAME"
+
+<p> To update database with class: </p>
+
+    - Update-Database -Verbose
+
+<p> If returns this error:</p>
+
+    - There is already an object named 'Products' in the database.
+
+<p> You will need follow steps below </p>
+
+<ul> 
+<li> Delete folder migration created in project </li>
+<li> Delete table migration created in database </li>
+<li> Let's go back to the beginning of the class of what we updated </li>
+
+    internal class Product
+    {
+        public int Id { get; internal set; }
+        public string Name { get; internal set; }
+        public string Category { get; internal set; }
+        public double Value { get; internal set; }
+
+        public override string ToString()
+        {
+            return $"Product: {this.Id}, {this.Name}, {this.Category}, {this.Value}";
+        }
+    }
+
+<li> Open Terminal PMC and type: </li>
+
+    - Add-Migration Init
+
+<li> Update class </li>
+
+    internal class Product
+    {
+        public int Id { get; internal set; }
+        public string Name { get; internal set; }
+        public string Category { get; internal set; }
+
+        //It was updated this attribute
+        public double CostUnit { get; internal set; }
+
+        //It was added this attribute
+        public string Unit{ get; internal set; }
+
+        public override string ToString()
+        {
+            return $"Product: {this.Id}, {this.Name}, {this.Category}, {this.CostUnit}";
+        }
+    }
+
+<li> Open Terminal PMC and type:</li>
+
+    - Add-Migration "Name" (ex: Add-Migration Unit)
+   
+
+<li> Comment the code in file "Migration > ..._Init.cs" </li>
+        
+
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            //migrationBuilder.CreateTable(
+            //    name: "Products",
+            //    columns: table => new
+            //    {
+            //        Id = table.Column<int>(type: "int", nullable: false)
+            //            .Annotation("SqlServer:Identity", "1, 1"),
+            //        Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+            //        Category = table.Column<string>(type: "nvarchar(max)", nullable: false),
+            //        Value = table.Column<double>(type: "float", nullable: false)
+            //    },
+            //    constraints: table =>
+            //    {
+            //        table.PrimaryKey("PK_Products", x => x.Id);
+            //    });
+        }
+
+<li> Open Terminal PMC and type: </li>
+
+    - Update-Database Init -Verbose
+
+
+<li> Remove comment in file (Migration > "..._Init.cs) </li>
+
+<li> Open Terminal PMC and type: </li>
+
+    - Update-Database -Verbose
+
+
+<li> Now your table in database will be updated with base in Class Product </li>
+
+</ul>
