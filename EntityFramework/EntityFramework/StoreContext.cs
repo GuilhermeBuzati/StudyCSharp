@@ -1,5 +1,4 @@
-﻿using EntityFramework;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace EntityFramework
 {
