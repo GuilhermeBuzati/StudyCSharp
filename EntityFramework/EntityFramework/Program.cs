@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+
 namespace EntityFramework
 {
     class Program
@@ -9,28 +11,33 @@ namespace EntityFramework
             {
                 var products = context.Products.ToList();
 
-                foreach(var product in products)
+                ShowEntries(context.ChangeTracker.Entries());
+
+                var newProduct = new Product()
                 {
-                    Console.WriteLine(product);
-                }
+                    Name = "Coca-Cola",
+                    Category = "Refrigerante",
+                    Value = 7.99
+                };
 
-                foreach(var e in context.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(e.State);
-                }
+                context.Products.Add(newProduct);
 
-                var product1 = products.Last();
-                product1.Name = "Teste de Livros";
+                ShowEntries(context.ChangeTracker.Entries());
 
-                //context.SaveChanges();
+                context.SaveChanges();
 
-                foreach (var e in context.ChangeTracker.Entries())
-                {
-                    Console.WriteLine(e.State);
-                }
+                ShowEntries(context.ChangeTracker.Entries());
 
             }
 
+        }
+
+        private static void ShowEntries(IEnumerable<EntityEntry> entries)
+        {
+            foreach (var e in entries)
+            {
+                Console.WriteLine(e.Entity.ToString() + " - " + e.State);
+            }
         }
     }
 }

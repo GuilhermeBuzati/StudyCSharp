@@ -15,7 +15,7 @@ namespace EntityFramework
 
         public override string ToString()
         {
-            return "Product: " + this.Name;
+            return $"Product: {this.Id}, {this.Name}, {this.Category}, {this.Value}";
         }
     }
 }
