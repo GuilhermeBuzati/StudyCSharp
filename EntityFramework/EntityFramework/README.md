@@ -210,7 +210,7 @@
     </ul>
 
 
-<h1 align="center" id="userToolsEntityFramework"> How to user Tools Entity FrameWork</h1>
+<h1 align="center" id="userToolsEntityFramework"> How to use Tools Entity FrameWork</h1>
 
 <p> Tools Entity FrameWork will syncronize the class with table in database. So, we do not need update script directly in database, the Tools will do
 this for us </p>
