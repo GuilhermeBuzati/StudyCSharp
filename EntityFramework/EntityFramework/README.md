@@ -7,7 +7,8 @@
             <li> <a href="#changeTrackerEntityFramework"> ChangeTracker</a></li>
             <li> <a href="#statesEntityFramework"> States </a></li>
         </ul>
-
+        
+    <li> <a href="#userToolsEntityFramework"> Tools Entity Framework </a></li>
 </ol>
 
 
@@ -21,9 +22,9 @@
 
 <p> Type the command </p>
 
-- Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.7
+    - Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.7
 
-	<p> In case, we are installing provider for SqlServer, but you can see all providers <a href="https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli"> here </a> </p>
+<p> In case, we are installing provider for SqlServer, but you can see all providers <a href="https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli"> here </a> </p>
 
 
 <h1 align="center" id="useEntityFramework"> EntityFramework </h1>
@@ -209,7 +210,7 @@
     </ul>
 
 
-<h1 align="center" id="installEntityFramework"> How to install Tools Entity FrameWork</h1>
+<h1 align="center" id="userToolsEntityFramework"> How to user Tools Entity FrameWork</h1>
 
 <p> Tools Entity FrameWork will syncronize the class with table in database. So, we do not need update script directly in database, the Tools will do
 this for us </p>
