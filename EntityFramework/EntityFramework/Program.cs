@@ -1,75 +1,37 @@
 ﻿
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+
 namespace EntityFramework
 {
     class Program
     {
         static void Main(string[] args)
         {
-            RecordUsingEntity();
-            //GetListProduct();
-            RemoveProduct();
-            //GetListProduct();
-            UpdateProduct();
-        }
 
-        private static void UpdateProduct()
-        {
-            GetListProduct();
+            var bread = new Product();
+            bread.Name = "Bread";
+            bread.CostUnit = 0.25;
+            bread.Unit = "UN";
+            bread.Category = "Bakery";
 
-            using (var context = new StoreContext())
+            var order = new Order();
+            order.Quantity = 6;
+            order.Product = bread;
+            order.Value = bread.CostUnit * order.Quantity;
+
+            using(var context = new StoreContext())
             {
-                Product product = context.Products.First();
-                product.Name = "Product updated!";
-                context.Products.Update(product);
-                context.SaveChanges();
-            }
+                context.Orders.Add(order);
 
-            GetListProduct();
-        }
-
-        private static void RemoveProduct()
-        {
-            using (var context = new StoreContext())
-            {
-                IList<Product> products = context.Products.ToList();
-
-                foreach(Product product in products)
+                foreach(var e in context.ChangeTracker.Entries())
                 {
-                    context.Products.Remove(product);                    
+                    Console.WriteLine(e.Entity.ToString() + " - " + e.State);
                 }
 
                 context.SaveChanges();
             }
-        }
 
-        private static void GetListProduct()
-        {
-            using (var context = new StoreContext())
-            {
-                IList<Product> products = context.Products.ToList();
-                Console.WriteLine("Foram encontrados {0} produtos(s).", products.Count);
 
-                foreach (var item in products)
-                {
-                    Console.WriteLine(item.Name);
-                }
-            }
-        }
-
-        private static void RecordUsingEntity()
-        {
-            Product p = new Product();
-            p.Name = "Harry Potter e a Ordem da Fênix";
-            p.Category = "Livros";
-            p.Value = 19.89;
-
-            using (var context = new StoreContext())
-            {
-                context.Products.Add(p);
-                context.SaveChanges();
-            }
-
-            Console.WriteLine("Saved!");
         }
     }
 }

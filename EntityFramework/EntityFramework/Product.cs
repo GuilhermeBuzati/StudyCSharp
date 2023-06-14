@@ -11,6 +11,13 @@ namespace EntityFramework
         public int Id { get; internal set; }
         public string Name { get; internal set; }
         public string Category { get; internal set; }
-        public double Value { get; internal set; }
+        public double CostUnit { get; internal set; }
+
+        public string Unit{ get; internal set; }
+
+        public override string ToString()
+        {
+            return $"Product: {this.Id}, {this.Name}, {this.Category}, {this.CostUnit}";
+        }
     }
 }
