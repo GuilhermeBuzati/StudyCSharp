@@ -141,7 +141,9 @@
 
 
 <h3 align="center" id="changeTrackerEntityFramework"> ChangeTracker and States </h3>
-    
+
+- <p> ChangeTracker </p>
+
 <h4> Branch: EntityFramework - Commit 442b0e8bb6059b7b392e024d29940bc0317138da </h4>
 
     static void Main(string[] args)
@@ -176,3 +178,35 @@
                 //Then, entity can manage state of each entity
             }
         }    
+
+
+- <p> <b> States </b> </p>
+
+<h4> Branch: EntityFramework - Commit ab8f9924fc2c2f921dfa0e936481e48086929bb0 </h4>
+
+    <ul>
+    <li> <b> Added </b>: Element added in context </li>
+        - Example: context.Products.Add(newProduct);<br>
+
+    <br>
+    <li> <b> Unchanged </b>: Element was return from database </li>
+        - Example: context.Products.ToList();<br>
+
+    <br>
+    <li> <b> Modified </b>: Element was update from context</li>
+            - Example: <br>
+                  var product1 = products.Last();<br>
+                  product1.Name = "Product tested";<br>
+        
+    <br>
+    <li> <b> Deleted </b>: Element was remove from context </li>
+        - Example: context.Products.Remove(product);<br>
+
+    <br>
+    <li> <b> Detached </b>: Element not being monitored in context </li>
+        - Example: </br>
+                 context.Products.Add(newProduct);</br>
+                  - Then, before the commit, it is removed </br>
+                 context.Products.Remove(newProduct);</br>
+                 
+    </ul>
