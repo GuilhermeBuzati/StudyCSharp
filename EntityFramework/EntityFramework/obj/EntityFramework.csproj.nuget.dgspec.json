@@ -45,7 +45,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[1.1.0, )"
+              "version": "[7.0.7, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

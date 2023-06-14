@@ -5,8 +5,25 @@ namespace EntityFramework
     {
         static void Main(string[] args)
         {
-            //RecordUsingEntity();
+            RecordUsingEntity();
             GetListProduct();
+            RemoveProduct();
+            GetListProduct();
+        }
+
+        private static void RemoveProduct()
+        {
+            using (var context = new StoreContext())
+            {
+                IList<Product> products = context.Products.ToList();
+
+                foreach(Product product in products)
+                {
+                    context.Products.Remove(product);                    
+                }
+
+                context.SaveChanges();
+            }
         }
 
         private static void GetListProduct()
@@ -14,6 +31,7 @@ namespace EntityFramework
             using (var context = new StoreContext())
             {
                 IList<Product> products = context.Products.ToList();
+                Console.WriteLine("Foram encontrados {0} produtos(s).", products.Count);
 
                 foreach (var item in products)
                 {
