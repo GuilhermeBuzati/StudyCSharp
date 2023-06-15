@@ -1,6 +1,6 @@
 ﻿namespace EntityFramework
 {
-    internal class Client
+    public class Client
     {
         public int Id { get; set; }
         public string Name { get; internal set; }

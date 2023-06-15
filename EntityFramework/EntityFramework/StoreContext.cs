@@ -16,6 +16,11 @@ namespace EntityFramework
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Update table name
+            //modelBuilder
+            //    .Entity<Address>()
+            //    .ToTable("New Name");
+            
             modelBuilder
                 .Entity<Address>()
                 .Property<int>("ClientId");

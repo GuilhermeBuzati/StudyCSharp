@@ -7,5 +7,7 @@
         public string Complement { get; internal set; }
         public string Neighborhood { get; internal set; }
         public string City { get; internal set; }
+
+        public Client Client { get; set; }
     }
 }
