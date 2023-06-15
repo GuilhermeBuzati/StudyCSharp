@@ -43,7 +43,7 @@ namespace EntityFramework.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("EntityFramework.Product", b =>
@@ -71,7 +71,7 @@ namespace EntityFramework.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("EntityFramework.SalePromotion", b =>
@@ -94,7 +94,7 @@ namespace EntityFramework.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SalePromotion");
+                    b.ToTable("SalePromotion", (string)null);
                 });
 
             modelBuilder.Entity("ProductSalePromotion", b =>
@@ -109,7 +109,7 @@ namespace EntityFramework.Migrations
 
                     b.HasIndex("SalePromotionsId");
 
-                    b.ToTable("ProductSalePromotion");
+                    b.ToTable("ProductSalePromotion", (string)null);
                 });
 
             modelBuilder.Entity("EntityFramework.Order", b =>
