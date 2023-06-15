@@ -8,12 +8,14 @@ namespace EntityFramework
 {
     internal class Product
     {
-        public int Id { get; internal set; }
+        public int Id { get; internal set; }    
         public string Name { get; internal set; }
         public string Category { get; internal set; }
         public double CostUnit { get; internal set; }
 
         public string Unit{ get; internal set; }
+
+        public IList<SalePromotion> SalePromotions { get; set; }
 
         public override string ToString()
         {

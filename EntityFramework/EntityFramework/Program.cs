@@ -8,20 +8,17 @@ namespace EntityFramework
         static void Main(string[] args)
         {
 
-            var bread = new Product();
-            bread.Name = "Bread";
-            bread.CostUnit = 0.25;
-            bread.Unit = "UN";
-            bread.Category = "Bakery";
+            var salePromotion = new SalePromotion();
 
-            var order = new Order();
-            order.Quantity = 6;
-            order.Product = bread;
-            order.Value = bread.CostUnit * order.Quantity;
+            salePromotion.Description = "Happy New Year";
+            salePromotion.DateInit = DateTime.Now;
+            salePromotion.DateEnd = DateTime.Now.AddMonths(3);
+            salePromotion.Products.Add(new Product());
+            salePromotion.Products.Add(new Product());
+            salePromotion.Products.Add(new Product());
 
-            using(var context = new StoreContext())
+            using (var context = new StoreContext())
             {
-                context.Orders.Add(order);
 
                 foreach(var e in context.ChangeTracker.Entries())
                 {
