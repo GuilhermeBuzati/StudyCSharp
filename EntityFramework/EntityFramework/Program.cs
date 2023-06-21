@@ -7,6 +7,35 @@ namespace EntityFramework
     {
         static void Main(string[] args)
         {
+
+            AddPromotion();
+        }
+
+        private static void AddPromotion()
+        {
+            using (var context = new StoreContext())
+            {
+                var promotion = new SalePromotion();
+                promotion.Description = "Queima estoque";
+                promotion.DateInit = new DateTime(2017, 1, 1);
+                promotion.DateEnd = new DateTime(2017, 1, 31);
+
+                var products = context.Products.Where(p => p.Category == "Alimentos").ToList();
+
+                foreach (var product in products)
+                {
+                    promotion.AddProduct(product);
+                }
+
+                context.SalePromotion.Add(promotion);
+
+                context.SaveChanges();
+
+            }
+        }
+
+        private static void OneToOne()
+        {
             var client = new Client();
             client.Name = "João";
             client.Address = new Address()
@@ -23,8 +52,6 @@ namespace EntityFramework
                 context.Clients.Add(client);
                 context.SaveChanges();
             }
-
-
         }
 
         private static void ManyToMany()

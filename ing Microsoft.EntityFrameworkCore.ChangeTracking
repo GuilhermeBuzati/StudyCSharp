@@ -1,0 +1,449 @@
+[33mcommit 793c979366b933578e8e8f8c0253df31120b62ca[m[33m ([m[1;36mHEAD -> [m[1;32mEntityFramework[m[33m, [m[1;31morigin/EntityFramework[m[33m)[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Thu Jun 15 17:51:19 2023 -0300
+
+    feat(Entity): Course - E5S7 - Update table name
+
+[33mcommit 6901f2146ad761fcbb4412e4e043da6c58009538[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Thu Jun 15 17:43:32 2023 -0300
+
+    feat(Entity): Course - E2S7 - Hidding info from database
+
+[33mcommit 411ee89bde8bcb31c903b31c4d1e9f813fddba04[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Thu Jun 15 17:19:04 2023 -0300
+
+    feat(Entity): Course - E5S6 - SalePromotion and Product
+
+[33mcommit 682ce5ff85c622bc5ea19aac5695a5e36f5aa537[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Thu Jun 15 16:56:13 2023 -0300
+
+    feat(Entity): Course - E1S6 - Relation N:M and join class
+
+[33mcommit dd98004c826f501215d0d7802e8aeca86a39dcee[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 17:44:02 2023 -0300
+
+    feat(Entity): Course - E5S4 - Insert object relation
+
+[33mcommit b6f0066e1746b2b9271e21103430a26ab300b13f[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 17:34:24 2023 -0300
+
+    feat(Entity): Course - E2S5 - Migration with Relation
+
+[33mcommit d68e45256c4ed57a4fcee014473f207cf42777de[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 17:25:41 2023 -0300
+
+    feat(Entity): Course - E1S5 - Relation 1:N
+
+[33mcommit 1645ee72d07b503325169b7ad21cea86f1e8ef36[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 17:15:38 2023 -0300
+
+    feat(Entity): Readme was updated!
+
+[33mcommit 19e450c01b626625069565f37757ddc7b0aab89e[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 17:14:56 2023 -0300
+
+    feat(Entity): Readme was updated!
+
+[33mcommit a131565f6d3b65f4a627260101ddee6e310c6474[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 17:13:34 2023 -0300
+
+    feat(Entity): Readme was updated!
+
+[33mcommit 6300efd3a8b94691e185e1f8bd3bb8fe6fa47a03[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 17:09:59 2023 -0300
+
+    feat(Entity): Course - E6S4 - Migration
+
+[33mcommit c1a4709754a371d431583848631f6960d2aa1960[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 15:40:42 2023 -0300
+
+    feat(Entity): Course - README was update!
+
+[33mcommit 4bd9338065fd42d469d2e9e796a141b249f22c89[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 15:32:31 2023 -0300
+
+    feat(Entity): Course - README was update!
+
+[33mcommit ab8f9924fc2c2f921dfa0e936481e48086929bb0[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 15:30:32 2023 -0300
+
+    feat(Entity): Course - E6S3 - State Deleted and Detached
+
+[33mcommit 852bd064f480efc8887e6cd9d19bc317574e497a[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 15:02:07 2023 -0300
+
+    feat(Entity): Course - E4S3 - State Added
+
+[33mcommit d55a205a9066ed76a4f7c12122c155ae7633e92d[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 14:12:01 2023 -0300
+
+    feat(Entity): Course - README was update!
+
+[33mcommit 442b0e8bb6059b7b392e024d29940bc0317138da[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 14:09:44 2023 -0300
+
+    feat(Entity): Course - E1S3 - ChangeTracker and States
+
+[33mcommit fff9ffd0d0f0fca72ea530c7737b770b3333d93f[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 12:15:49 2023 -0300
+
+    feat(Entity): Course - E2S7 - Refactor code DAO
+
+[33mcommit 23a56900da9f4406772b267df5fe12d63a27d048[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 11:56:22 2023 -0300
+
+    feat(Entity): Course - README was update!
+
+[33mcommit c7bb06217bbaa771f02d26cc15dbf4b00564fb37[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 11:21:47 2023 -0300
+
+    feat(Entity): Course - E8S5 - Updating a object with Entity
+
+[33mcommit 35c19a22fb539108ae3b69e4cf13f468b80cd7df[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 11:12:42 2023 -0300
+
+    feat(Entity): Course - E8S3 - Deleting a object with Entity
+
+[33mcommit d901798fa797273c000401cdb6487e4f01131eb8[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 10:59:58 2023 -0300
+
+    feat(Entity): Course - E1S2 - Listing object with Entity
+
+[33mcommit e735830ca38e70e2a3c31060f7b0b697e866e2d1[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 14 10:26:39 2023 -0300
+
+    feat(Entity): Course - E8S1 - Initializing Framework
+
+[33mcommit b9018bcaccc088c76c3fd5de252ccb321b41caba[m[33m ([m[1;31morigin/SOLID[m[33m, [m[1;32mSOLID[m[33m)[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 17:31:52 2023 -0300
+
+    feat(Solid): Course - Init
+
+[33mcommit 7364f585718b446bea5fc1f357dd6b8feaf29ae7[m[33m ([m[1;31morigin/EntityCore[m[33m)[m
+Merge: 1f68627 3425a45
+Author: Guilherme Leopoldino <135622282+GuilhermeLeopoldino@users.noreply.github.com>
+Date:   Wed Jun 7 17:04:48 2023 -0300
+
+    Merge pull request #4 from GuilhermeBuzati/Arrays
+    
+    Arrays
+
+[33mcommit 3425a45857b9c768b941aa46a3e9b645c6f027d1[m[33m ([m[1;31morigin/Arrays[m[33m)[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 17:02:10 2023 -0300
+
+    feat(Arrays): Course - Done
+
+[33mcommit c682453e493824d73c5188cabed73012d68cf073[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 16:43:37 2023 -0300
+
+    feat(Arrays): Course - E5S5 - Query (Like SQL) into code dotnet
+
+[33mcommit 07560ee21636bc42078c0e913f2054c328ce3f84[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 16:25:12 2023 -0300
+
+    feat(Arrays): Course - E2S5 - Where
+
+[33mcommit 51e737345f1be7b8d60af3446057332f9f3b629d[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 16:14:33 2023 -0300
+
+    feat(Arrays): Course - E7S4 - Creating search function
+
+[33mcommit c17550706374cdc7f2a264929176f47781ce4a27[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 15:49:24 2023 -0300
+
+    feat(Arrays): Course - E4S4 - Ordering list
+
+[33mcommit 696e1e4aeba2e12556f8b445e5ac41364211f54b[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 15:14:45 2023 -0300
+
+    feat(Arrays): Course - E2S4 - Removing item from list
+
+[33mcommit b060b292246547cb00b01401a0df83cf8f300c3e[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 15:05:21 2023 -0300
+
+    feat(Arrays): Course - E9S3 - Treatment Exception
+
+[33mcommit 009446012565923fda59198defcec26308df08fe[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 14:19:31 2023 -0300
+
+    feat(Arrays): Course - E5S3 - Methods Available
+
+[33mcommit 497b02ff8a4d6928b6708c40933af25b9c39ed10[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 14:05:17 2023 -0300
+
+    feat(Arrays): Course - E2S3 - Generic and List
+
+[33mcommit 87158a189f5e671639f14af92a308654cef6c2ea[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 13:31:59 2023 -0300
+
+    feat(Arrays): Course - E10S2 - ArrayList
+
+[33mcommit 0056f7218cb9aaece8d094fac57cffc660c6bc48[m
+Author: Guilherme Leopoldino <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Wed Jun 7 11:43:32 2023 -0300
+
+    feat(Arrays): Course - E8S2 - Index
+
+[33mcommit eb3785610960bf1db9517b2637419bd88e872f16[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 15:43:12 2023 -0300
+
+    feat(Arrays): Course - E6S2 - Removing item
+
+[33mcommit aba082de784ad7b80fae7ccc3592aadb4d9868d6[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 15:33:44 2023 -0300
+
+    feat(Arrays): Course - E4S2 - Class List Account
+
+[33mcommit 693394b2c1428b0e9b4b87bee16a7d7fc185e25f[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 15:21:22 2023 -0300
+
+    feat(Arrays): Course - E2S2 - Array Class
+
+[33mcommit d08fbe2cda355a6cc0dc7952466c98ec85b15ce6[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 15:10:37 2023 -0300
+
+    feat(Arrays): Course - E11S1 - Position not exists
+
+[33mcommit ad3a546e81a11b6904346fc7e3a0eb20b7f6c7a7[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 15:07:22 2023 -0300
+
+    feat(Arrays): Course - E10S1 - Class Array
+
+[33mcommit e2272cf365b6793803139ceb463c94593b5459cb[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 14:56:40 2023 -0300
+
+    feat(Arrays): Course - E7S1 - Reading Arrays
+
+[33mcommit 8ef9024380de2df32a723f02d984739f2a5d47c1[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 14:48:29 2023 -0300
+
+    feat(Arrays): Course - E4S1 - First Array
+
+[33mcommit 1f6862799d1ea7a8cf0072435a1b15b359ca1333[m
+Merge: 299f736 5eb5b9e
+Author: Guilherme Leopoldino <135622282+GuilhermeLeopoldino@users.noreply.github.com>
+Date:   Tue Jun 6 14:32:57 2023 -0300
+
+    Merge pull request #1 from GuilhermeBuzati/Exceptions
+    
+    Exceptions -> Main
+
+[33mcommit 5eb5b9edbc0233432430002871e36502e0570615[m[33m ([m[1;31morigin/Exceptions[m[33m)[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 14:25:17 2023 -0300
+
+    feat(Exception): Course - E4S5 - Finally
+
+[33mcommit 2d0a9c7e09941192808ae580972820fdea9e6496[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 14:22:17 2023 -0300
+
+    feat(Exception): Course - E4S4 -IOException
+
+[33mcommit a2fde1195066310d8282c4b6cebf01a38b4cf692[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 14:18:11 2023 -0300
+
+    feat(Exception): Course - E5S3 - Reading a file
+
+[33mcommit 58ba815bdedfbf7d3c80758eb1039fd21be1d478[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 12:17:48 2023 -0300
+
+    feat(Exception): Course - E3S4 - InnerException
+
+[33mcommit a5136d0e61bb29674ed6f3fd3596e11f80ad3af8[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 12:05:49 2023 -0300
+
+    feat(Exception): Course - E3S3 - Create a Exception personalized
+
+[33mcommit cc5f3ac222fb2362d4ee5dacc339d4f66b08f019[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 11:46:50 2023 -0300
+
+    feat(Exception): Course - E4S2 - ParamName and NameOf
+
+[33mcommit 41249b6e58ffc73bbc008ec35918e6f5aa9f8b8e[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 11:42:15 2023 -0300
+
+    feat(Exception): Course - E3S2 - Throw
+
+[33mcommit c4338948c6e10c1840607740a56e07cb9735629a[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 11:24:42 2023 -0300
+
+    feat(OOP): Course - E7S1 - Treatment Error
+
+[33mcommit b7a7d6f1e3899561fc6988264cebc89dfbe0fa34[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Tue Jun 6 09:31:50 2023 -0300
+
+    feat(OOP): Course - Done
+
+[33mcommit 803675a9f258c1be58aeead226228bef5d210d29[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 12:06:16 2023 -0300
+
+    feat(OOP): Course - E5S4 - Constructor for class
+
+[33mcommit d4fecda4b7973bf3ae7f5de1bd753d0b126f911c[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 11:56:15 2023 -0300
+
+    feat(OOP): Course - E4S4 - Constructor and Relation between class
+
+[33mcommit 44c1e0c1e291520cb0a5eb874238c703d9f3e0f9[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 11:45:53 2023 -0300
+
+    feat(OOP): Course - E2S4 - Creating class Band
+
+[33mcommit 7bb84ddf2fd38e5700a366846661f5ea0d3415f7[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 11:34:42 2023 -0300
+
+    feat(OOP): Course - E4S3 - Showing list of musics
+
+[33mcommit a343732b2fb00b1cd71648aa7bd354ba30f5a4db[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 11:30:03 2023 -0300
+
+    feat(OOP): Course - E3S3 - Creating list of music
+
+[33mcommit 43903a373662d44ea1723a8e8a00be6d3f0984f1[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 11:23:28 2023 -0300
+
+    feat(OOP): Course - E2S3 -Creating class Album
+
+[33mcommit 1f04446b5134f13083226afd10d054288f470b69[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 11:15:23 2023 -0300
+
+    feat(OOP): Course - E6S2 - GET with Lambda
+
+[33mcommit 7fcaeb6a1e8d1defadfe3eeba0e23e17af62dd00[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 10:51:07 2023 -0300
+
+    feat(OOP): Course - E5S2 - Attributes n Properties
+
+[33mcommit 966440c3b9702f816e9e181647c701f2edd5312e[m
+Author: Guilherme Buzati <guilherme.leopoldino@buttinimoraes.com.br>
+Date:   Mon Jun 5 10:42:16 2023 -0300
+
+    Adjust account
+
+[33mcommit 831eab0817163547c4db8a9f123f862cf92ef7fb[m
+Author: Guilherme Buzati <guilhermeleopoldinoo@gmail.com>
+Date:   Mon Jun 5 10:38:39 2023 -0300
+
+    feat(OOP): Course - E4S2 - Properties
+
+[33mcommit 10b7ed5a2b7cad923329725824d9a3ff2a33c5f2[m
+Author: Guilherme Buzati <guilhermeleopoldinoo@gmail.com>
+Date:   Mon Jun 5 10:26:42 2023 -0300
+
+    feat(OOP): Course - E3S2 - Centralizing Access
+
+[33mcommit 7f5fcb34fc13ba6612ea4b71dce38e9049f4383f[m
+Author: Guilherme Buzati <guilhermeleopoldinoo@gmail.com>
+Date:   Mon Jun 5 10:15:29 2023 -0300
+
+    feat(OOP): Course - E2S2 - Assigning Values
+
+[33mcommit 7d1cdb618778f20f92e4fc76339429af17f2752a[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Mon Jun 5 00:04:45 2023 -0300
+
+    feat(OOP): Course - E5S1 - Creating methods
+
+[33mcommit faa5e85ff41453d0dcbcf916177ca697af2b2772[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 23:58:14 2023 -0300
+
+    feat(OOP): Course - E2S1 - Objects
+
+[33mcommit 625b8f797eb1d2c07c85d6e2b38e82dfd6ed4907[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 23:52:46 2023 -0300
+
+    feat(OOP): Course - E1S1 - Creating a class
+
+[33mcommit d20813e0188e76f0606bf6f9e111ebe2741a9dc6[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 23:45:59 2023 -0300
+
+    Adjust files
+
+[33mcommit c6488fa2ebdb2d3550deee90e54e3847e903fa2a[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 23:44:39 2023 -0300
+
+    Init
+
+[33mcommit 8f803ffaaa861600379b2a218b89cf9cfb4f309f[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 23:33:22 2023 -0300
+
+    feat(FirstApp): Course - E2S5 - Challenger Average Rating
+
+[33mcommit 7f546f81e0ced2dc15cb887e8f543f2a5011babc[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 23:01:56 2023 -0300
+
+    feat(FirstApp): Course - E6S4 - Rating a band part 2
+
+[33mcommit 26637bea88085d65a86829bd6b8800adc951f6a3[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 22:54:49 2023 -0300
+
+    feat(FirstApp): Course - E5S4 - Rating a band
+
+[33mcommit a57f48b69b46a254fff4a4a4f2a6e2db7de9a407[m
+Author: Guilherme Buzati <32195467+GuilhermeBuzati@users.noreply.github.com>
+Date:   Sun Jun 4 22:49:36 2023 -0300
+
+    feat(FirstApp): Course - E4S4 - Methods Return
