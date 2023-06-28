@@ -115,6 +115,28 @@
         }
 
 
+- <p> Method Contains, verify if param is in variable </p>
+
+        [Fact]
+        public void DadosVeiculo()
+        {
+
+            //Arrange
+            var veiculo = new Veiculo();
+            veiculo.Proprietario = "João";
+            veiculo.Tipo = TipoVeiculo.Automovel;
+            veiculo.Cor = "Branco";
+            veiculo.Placa = "asd-9999";
+            veiculo.Modelo = "Strada";
+
+            //Act
+            string dados = veiculo.ToString();
+
+            //Assert
+            Assert.Contains("Ficha do Veículo:", dados);
+        }
+        
+
 <h2> Pattern AAA </h2>
 <hr>
 
