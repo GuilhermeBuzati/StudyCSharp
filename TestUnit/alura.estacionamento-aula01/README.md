@@ -135,7 +135,7 @@
             //Assert
             Assert.Contains("Ficha do Veículo:", dados);
         }
-        
+
 
 <h2> Pattern AAA </h2>
 <hr>
@@ -312,3 +312,44 @@
             //Assert
             Assert.Equal(modelo.VelocidadeAtual, veiculo.VelocidadeAtual);
         }
+
+
+<h2> Test with Exception </h2>
+<hr>
+
+- <p> Testing exception from class "Veiculo" </p>
+
+    //Class "VeiculoTeste"
+
+        [Fact]
+        public void TesteNomeProprietarioVeiculoComMenosDeTresCaracteres()
+        {
+            string nomeProprietario = "Ab";
+
+            Assert.Throws<System.FormatException>(
+                () => new Veiculo(nomeProprietario));
+        }
+
+
+    //Class "Proprietario"
+
+        public string Proprietario
+        {
+            get
+            {
+                return _proprietario;
+            }
+            set
+            {
+                if (value.Length < 3)
+                {
+                    throw new System.FormatException(" Nome de proprietário deve ter no mínimo 3 caracteres.");
+                }
+                _proprietario = value;
+            }
+
+        }
+    
+- <p> Will return FormatException, as defined in the class </p>
+
+    ![Alt text](image-15.png)
