@@ -141,10 +141,10 @@
         }
 
 
-<h2> Anotations xUnix </h2>
+<h2> Annotations xUnix </h2>
 <hr>
 
-- <p> Anotation [Fact], test simple </p>
+- <p> Annotation [Fact], test simple </p>
   
         [Fact]
         public void TestaVeiculoAcelerar()
@@ -162,7 +162,7 @@
         }
 
 
-- <p> Anotation [Theory], you may test with any values </p>
+- <p> Annotation [Theory], you may test with any values </p>
 
         [Theory]
         [InlineData ("João Silva", "ASD-1498", "preto", "Strada")]
