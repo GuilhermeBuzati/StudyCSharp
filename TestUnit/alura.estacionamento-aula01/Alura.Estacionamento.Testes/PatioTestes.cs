@@ -6,17 +6,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Alura.Estacionamento.Testes
 {
-    public class PatioTestes
+    public class PatioTestes : IDisposable
     {
+
+        private Veiculo veiculo;
+        private ITestOutputHelper saidaConsoleTeste;
+
+        public PatioTestes(ITestOutputHelper _saidaConsoleTeste)
+        {
+            saidaConsoleTeste = _saidaConsoleTeste;
+            saidaConsoleTeste.WriteLine("Construtor Invocado"); 
+            veiculo = new Veiculo();
+        }
+
+
+
         [Fact]
         public void ValidaFaturamento()
         {
             //Arrange
             var estacionamento = new Patio();
-            var veiculo = new Veiculo();
             veiculo.Proprietario = "João";
             veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Cor = "Branco";
@@ -43,7 +56,6 @@ namespace Alura.Estacionamento.Testes
         {
             //Arrange
             var estacionamento = new Patio();
-            var veiculo = new Veiculo();
             veiculo.Proprietario = propietario;
             veiculo.Cor = cor;
             veiculo.Placa = placa;
@@ -65,7 +77,6 @@ namespace Alura.Estacionamento.Testes
         {
             //Arrange
             var estacionamento = new Patio();
-            var veiculo = new Veiculo();
             veiculo.Proprietario = propietario;
             veiculo.Cor = cor;
             veiculo.Placa = placa;
@@ -86,7 +97,6 @@ namespace Alura.Estacionamento.Testes
         {            
             //Arrange
             var estacionamento = new Patio();
-            var veiculo = new Veiculo();
             veiculo.Proprietario = "João";
             veiculo.Cor = "Branco";
             veiculo.Placa = "asd-9999";
@@ -105,6 +115,11 @@ namespace Alura.Estacionamento.Testes
 
             //Asset
             Assert.Equal(alterado.Cor, veiculoAlterado.Cor);
+        }
+
+        public void Dispose()
+        {
+            saidaConsoleTeste.WriteLine("Dispose Invocado");
         }
     }
 }
