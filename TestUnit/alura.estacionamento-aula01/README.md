@@ -247,3 +247,46 @@
         }
 
     ![Alt text](image-14.png)
+
+
+<h2> Theory with ClassData </h2>
+<hr>
+
+- <p> 1º </p>
+  
+        public class Veiculo:IEnumerable<object[]>
+
+- <p> 2º </p>
+
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            yield return new object[]
+            {
+                new Veiculo
+                {
+                    Proprietario = "André Silva",
+                    Placa = "ASD-9999",
+                    Cor="Verde",
+                    Modelo="Fusca"
+                }
+            };
+        }
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+- <p> 3º </p>
+
+        [Theory]
+        [ClassData(typeof(Veiculo))]
+        public void TestaVeiculoClass(Veiculo modelo)
+        {
+            //Arrange
+            var veiculo = new Veiculo();
+
+            //Act
+            veiculo.Acelerar(10);
+            modelo.Acelerar(10);
+
+            //Assert
+            Assert.Equal(modelo.VelocidadeAtual, veiculo.VelocidadeAtual);
+        }
