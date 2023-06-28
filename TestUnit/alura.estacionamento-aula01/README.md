@@ -92,4 +92,25 @@
 <h2> Pattern AAA </h2>
 <hr>
 
+- <p> <b>Arrange</b>: Preparing environment </p>
+
+- <p> <b>Act</b>: What will be tested </p>
+
+- <p> <b>Assert</b>: Results from the tests </p>
+
+
+        [Fact]
+        public void TestaVeiculoAcelerar()
+        {
+            //Pattern AAA
+            //Arrange
+            var veiculo = new Veiculo();
+
+            //Act
+            veiculo.Acelerar(10);
+
+            //Assert
+            Assert.Equal(100, veiculo.VelocidadeAtual);
+
+        }
 
