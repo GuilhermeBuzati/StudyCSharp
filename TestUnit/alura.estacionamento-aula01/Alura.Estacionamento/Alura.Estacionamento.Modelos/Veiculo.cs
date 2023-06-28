@@ -11,8 +11,14 @@ namespace Alura.Estacionamento.Modelos
         private string _placa;
         private string _proprietario;
         private TipoVeiculo _tipo;
-     
+        private string _ticker;
+
+        public string IdTicket { get; set; }
+
+        public string Ticket { get => _ticker; set => _ticker = value; }
+
         //Propriedades   
+
 
         public string Placa
         {
@@ -123,7 +129,8 @@ namespace Alura.Estacionamento.Modelos
                 $"Proprietário: {this.Proprietario} \n" +
                 $"Modelo: {this.Modelo} \n" +
                 $"Cor: {this.Cor} \n" +
-                $"Placa: {this.Placa} \n";
+                $"Placa: {this.Placa} \n" +
+                $"Ticket: {this.Ticket} \n";
         }
 
 
