@@ -7,6 +7,7 @@ namespace Alura.Estacionamento.Testes
     public class VeiculoTestes
     {
         [Fact]
+        [Trait("Funcionalidade", "Acelerar")]
         public void TestaVeiculoAcelerar()
         {
             //Pattern AAA
@@ -21,13 +22,21 @@ namespace Alura.Estacionamento.Testes
 
         }
 
-        [Fact]
+        [Fact(DisplayName = "Teste de frear")]
+        [Trait("Funcionalidade", "Frear")]
         public void TestaVeiculoFrear()
         {
 
             var veiculo = new Veiculo();
             veiculo.Frear(10);
             Assert.Equal(-150, veiculo.VelocidadeAtual);
+
+        }
+
+        [Fact(Skip = "Teste ainda não implementado. Ignorar")]
+        public void ValidaNomePropietario()
+        {
+
 
         }
     }

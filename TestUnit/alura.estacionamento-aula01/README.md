@@ -200,3 +200,50 @@
 - <p> Return </p>
 
     ![Alt text](image-12.png)
+
+
+<h2> Attributes from Annotations xUnit </h2>
+<hr>
+
+- <p> <b> Attribute "Skip" </b>: The test will be skipped </p>
+
+        [Fact(Skip = "Teste ainda não implementado. Ignorar")]
+        public void ValidaNomePropietario()
+        { }
+
+- <p> <b> Attribute "DisplayName" </b>: The test will be renamed </p>
+
+
+        [Fact(DisplayName = "Teste de frear")]
+        public void TestaVeiculoFrear()
+        {
+            var veiculo = new Veiculo();
+            veiculo.Frear(10);
+            Assert.Equal(-150, veiculo.VelocidadeAtual);
+        }
+
+        
+        
+    ![Alt text](image-13.png)
+    
+- <p> <b> Attribute "Trait" </b>: To organize the tests </p>
+
+        [Fact]
+        [Trait("Funcionalidade", "Acelerar")]
+        public void TestaVeiculoAcelerar()
+        {
+            var veiculo = new Veiculo();
+            veiculo.Acelerar(10);
+            Assert.Equal(100, veiculo.VelocidadeAtual);
+        }
+
+        [Fact(DisplayName = "Teste de frear")]
+        [Trait("Funcionalidade", "Frear")]
+        public void TestaVeiculoFrear()
+        {
+            var veiculo = new Veiculo();
+            veiculo.Frear(10);
+            Assert.Equal(-150, veiculo.VelocidadeAtual);
+        }
+
+    ![Alt text](image-14.png)
