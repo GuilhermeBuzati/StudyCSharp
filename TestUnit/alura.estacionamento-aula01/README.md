@@ -188,3 +188,15 @@
             //Assert
             Assert.Equal(2, faturamento);
         }
+
+
+<h2> Test with command line </h2>
+<hr>
+
+- <p> In "Package Manager Console", type:
+
+        dotnet test
+
+- <p> Return </p>
+
+    ![Alt text](image-12.png)
