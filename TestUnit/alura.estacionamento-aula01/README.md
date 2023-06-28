@@ -18,23 +18,23 @@
 
 - <p> In project, add a new project as xUnit Test Project </p>
 	
-    ![Alt text](readme_images/image-1.png)
+    ![Alt text](../readme_images/image-1.png)
 
-    ![Alt text](readme_images/image-2.png)
+    ![Alt text](../readme_images/image-2.png)
 
-    ![Alt text](readme_images/image-3.png)
+    ![Alt text](../readme_images/image-3.png)
 
 
 - <p> Project test added </p>
 
-    ![Alt text](readme_images/image-4.png)
+    ![Alt text](../readme_images/image-4.png)
 
 
 - <p> Now, you must add a reference in xUnit Test Project </p>
 
-    ![Alt text](readme_images/image-5.png)
+    ![Alt text](../readme_images/image-5.png)
 
-    ![Alt text](readme_images/image-6.png)
+    ![Alt text](../readme_images/image-6.png)
 
 
 - <p> Testing method "Acelerar" from class "Veiculo" </p>
@@ -65,16 +65,16 @@
 
 - <p> To test the function </p>
 
-    ![Alt text](readme_images/image-7.png)
+    ![Alt text](../readme_images/image-7.png)
 
-    ![Alt text](readme_images/image-8.png)
+    ![Alt text](../readme_images/image-8.png)
 
 
 - <p> Results </p>
 
-    ![Alt text](readme_images/image-9.png)
+    ![Alt text](../readme_images/image-9.png)
 
-    ![Alt text](readme_images/image-10.png)
+    ![Alt text](../readme_images/image-10.png)
 
 
 - <p> Repeting test for method "Frear </p>
@@ -101,7 +101,7 @@
         }
 
     
-    ![Alt text](readme_images/image-11.png)
+    ![Alt text](../readme_images/image-11.png)
 
 
 - <p> Now, testing the method "TotalFaturado", class "Patio".
@@ -239,7 +239,7 @@
 
 - <p> Return </p>
 
-    ![Alt text](readme_images/image-12.png)
+    ![Alt text](../readme_images/image-12.png)
 
 
 </br>
@@ -265,7 +265,7 @@
 
         
         
-    ![Alt text](readme_images/image-13.png)
+    ![Alt text](../readme_images/image-13.png)
     
 - <p> <b> Attribute "Trait" </b>: To organize the tests </p>
 
@@ -287,7 +287,7 @@
             Assert.Equal(-150, veiculo.VelocidadeAtual);
         }
 
-    ![Alt text](readme_images/image-14.png)
+    ![Alt text](../readme_images/image-14.png)
 
 
 </br>
@@ -373,4 +373,4 @@
     
 - <p> Will return FormatException, as defined in the class </p>
 
-    ![Alt text](readme_images/image-15.png)
+    ![Alt text](../readme_images/image-15.png)
