@@ -89,6 +89,31 @@
     ![Alt text](image-11.png)
 
 
+- <p> Now, testing the method "TotalFaturado", class "Patio".
+
+        [Fact]
+        public void ValidaFaturamento()
+        {
+            //Arrange
+            var estacionamento = new Patio();
+            var veiculo = new Veiculo();
+            veiculo.Proprietario = "João";
+            veiculo.Tipo = TipoVeiculo.Automovel;
+            veiculo.Cor = "Branco";
+            veiculo.Placa = "asd-9999";
+
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+
+            estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
+
+            //Act
+            double faturamento = estacionamento.TotalFaturado();
+
+            //Assert
+            Assert.Equal(2, faturamento);
+
+        }
+
 <h2> Pattern AAA </h2>
 <hr>
 
