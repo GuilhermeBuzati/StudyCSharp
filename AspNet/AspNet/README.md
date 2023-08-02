@@ -9,7 +9,7 @@
 <li><a href="#routes"> Routes and Methods </a></li>
 <li><a href="#annotationAttributes"> Annotations Attribute's </a></li>
 <li><a href="#pagination"> Pagination </a></li>
-<li><a href="#exception"> Test with Exception </a></li>
+<li><a href="#statusCode"> Status Code </a></li>
 </ol>
 
 </br>
