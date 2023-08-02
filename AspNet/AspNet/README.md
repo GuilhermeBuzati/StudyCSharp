@@ -89,8 +89,9 @@
 - <p> <b> Skip(int N)</b>: Jump N elements
 - <p> <b> Take(int N)</b>: Get N elements to return
 
-  -   Example: Skip 3 element and take 2
+  -   Example: Skip 3 element and take 2. In this case, take contains default value (10)
 
+        ![Alt text](image-20.png)
 
         ![Alt text](image-14.png)
 
