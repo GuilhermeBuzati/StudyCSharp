@@ -7,7 +7,7 @@ namespace AspNet.Controllers
     [Route("[controller]")]
     public class FilmeController : ControllerBase
     {
-        private List<Filme> filmes = new List<Filme>();
+        private static List<Filme> filmes = new List<Filme>();
 
         //FromBody = ResquestBody(Spring Boot) -> The content will be sending by body of request (JSON)
         [HttpPost]
@@ -17,6 +17,12 @@ namespace AspNet.Controllers
                 Console.WriteLine(filme.Titulo);
                 Console.WriteLine(filme.Genero);
                 Console.WriteLine(filme.Duracao);
+        }
+
+        [HttpGet]
+        public IEnumerable<Filme> RecuperarFilmes()
+        {
+            return filmes;
         }
     }
 }

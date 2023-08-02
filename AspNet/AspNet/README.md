@@ -53,13 +53,16 @@
 
     ![Alt text](image-6.png)
 
+- <p> Returning data </p>
+
+    ![Alt text](image-8.png)
 
 </br>
 <h2 id="annotationAttributes"> Annotations Attribute's </h2>
 <hr>
 
 - <p> <b> [Required] </b> = Attribute can not be null</p>
-- <p> <b> [MaxLength] </b> = Max caracters allowed</p>
+- <p> <b> [MaxLength()] </b> = Max caracters allowed</p>
 - <p> <b> [Range (init, end)] </b> = Value must be between these values </p>
 - <p> <b> ErrorMessage </b> = You can define a custom message for that error</p>
 
