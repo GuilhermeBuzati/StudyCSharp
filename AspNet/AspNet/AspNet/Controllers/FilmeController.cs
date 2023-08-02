@@ -9,7 +9,7 @@ namespace AspNet.Controllers
     {
         private List<Filme> filmes = new List<Filme>();
 
-        //FromBody = ResquestBody(Spring Boot)
+        //FromBody = ResquestBody(Spring Boot) -> The content will be sending by body of request (JSON)
         [HttpPost]
         public void AdicionarFilme([FromBody] Filme filme)
         {

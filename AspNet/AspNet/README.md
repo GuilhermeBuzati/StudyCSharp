@@ -45,6 +45,10 @@
 <h2 id="firstRoute"> First Route </h2>
 <hr>
 
-- <p> Example Method GET</p>
+- <p> Example Method <b> GET </b> </p>
 
     ![Alt text](image-5.png)
+
+- <p> Example Method <b> POST </b> receiving parameter. </p>
+
+    ![Alt text](image-6.png)
