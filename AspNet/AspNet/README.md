@@ -95,3 +95,25 @@
         ![Alt text](image-14.png)
 
         ![Alt text](image-15.png)
+
+    
+</br>
+<h2 id="statusCode"> Status Code </h2>
+<hr>
+
+- <p> When element not found, will return: <b>"Not Found()"</b> </p>
+
+    ![Alt text](image-16.png)
+
+    If filme is null, return method <b>"Not Found()"</b> - Status 404
+
+    ![Alt text](image-17.png)
+
+- <p> When element was created, will return: <b>"Created()"</b> </p>
+
+    ![Alt text](image-19.png)
+
+    return method "CreatedAtAction()" and path from element created - Status - 201
+
+    ![Alt text](image-18.png)
+    

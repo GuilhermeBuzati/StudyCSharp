@@ -1,4 +1,5 @@
 ﻿using AspNet.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNet.Controllers
@@ -12,13 +13,12 @@ namespace AspNet.Controllers
 
         //FromBody = ResquestBody(Spring Boot) -> The content will be sending by body of request (JSON)
         [HttpPost]
-        public void AdicionarFilme([FromBody] Filme filme)
+        public IActionResult AdicionarFilme([FromBody] Filme filme)
         {
             filme.Id = id++;
             filmes.Add(filme);
-            Console.WriteLine(filme.Titulo);
-            Console.WriteLine(filme.Genero);
-            Console.WriteLine(filme.Duracao);
+
+            return CreatedAtAction(nameof(RecuperaFilmePorId), new {id = filme.Id}, filme);
         }
 
         [HttpGet]
@@ -28,9 +28,13 @@ namespace AspNet.Controllers
         }
 
         [HttpGet("{id}")]
-        public Filme? RecuperaFilmePorId(int id)
+        public IActionResult RecuperaFilmePorId(int id)
         {
-            return filmes.FirstOrDefault(filme => filme.Id == id);
+            var filme = filmes.FirstOrDefault(filme => filme.Id == id);
+            if (filme == null) return NotFound();
+
+            return Ok(filme);
+
 
         }
     }
