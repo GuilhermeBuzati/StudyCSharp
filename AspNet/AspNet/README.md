@@ -11,6 +11,8 @@
 <li><a href="#pagination"> Pagination </a></li>
 <li><a href="#statusCode"> Status Code </a></li>
 <li><a href="#databaseConnection"> Database Connection </a></li>
+<li><a href="#migration"> Creating Table from Classe (Migration) </a></li>
+<li><a href="#context"> Update list films to DbContext created </a></li>
 </ol>
 
 </br>
@@ -151,7 +153,6 @@
 <h2 id="migration"> Creating Table from Classe (Migration) </h2>
 <hr>
 
-
 -   <p> Add a <b> [Key] </b> to identify "Id" as primary key and <b>[Required]</b> (not null) </p>
 
     ![Alt text](image-24.png)
@@ -176,3 +177,20 @@
 -   <p> Done! </p>
 
     ![Alt text](image-29.png)
+
+               
+</br>
+<h2 id="context"> Update List Films to DbContext Films created </h2>
+<hr>
+
+-   <p> Define variable and constructor to context </p>
+    
+    ![Alt text](image-30.png)
+
+    ![Alt text](image-31.png)
+
+    ![Alt text](image-32.png)
+
+    ![Alt text](image-33.png)
+
+-   <p> Data will be insert into database, and list from it </p>
