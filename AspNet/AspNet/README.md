@@ -238,3 +238,14 @@
 -   <p> In "FilmeController.cs": </p>
     
     ![Alt text](image-45.png)
+
+-   <p> In case method "PATCH", follow the steps: </p>
+
+
+    -   <p> Install Package <b> "NewtonsoftJson" </b>
+
+        ![Alt text](image-46.png)
+
+    -   <p> "Program.cs" add <b>".AddNewtonsoftJson" </b> in: </p>
+
+        ![Alt text](image-47.png)
