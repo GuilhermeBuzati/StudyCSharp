@@ -10,6 +10,7 @@
 <li><a href="#annotationAttributes"> Annotations Attribute's </a></li>
 <li><a href="#pagination"> Pagination </a></li>
 <li><a href="#statusCode"> Status Code </a></li>
+<li><a href="#databaseConnection"> Database Connection </a></li>
 </ol>
 
 </br>
@@ -118,3 +119,60 @@
 
     ![Alt text](image-18.png)
     
+    
+</br>
+<h2 id="databaseConnection"> Database Connection </h2>
+<hr>
+
+-   <p> In "appsetting.json": </p>
+
+    ![Alt text](image-21.png)
+
+-   <p> Add the command with the credentials of database. Example: </p>
+
+        "ConnectionStrings": {
+            "FilmeConnection" : "server=localhost;database=filme;user=root;password=root"
+        }
+
+    ![Alt text](image-22.png)
+
+-   <p> Now, we must define the connection of database for DBContext in "program.cs". </p>
+
+        //String of connection database
+        var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
+                
+        //Connect to datase
+        builder.Services.AddDbContext<FilmeContext>(opts => opts.UseMySql(connectionString, serverVersion: ServerVersion.AutoDetect(connectionString)));
+
+    ![Alt text](image-23.png)
+        
+    
+</br>
+<h2 id="migration"> Creating Table from Classe (Migration) </h2>
+<hr>
+
+
+-   <p> Add a <b> [Key] </b> to identify "Id" as primary key and <b>[Required]</b> (not null) </p>
+
+    ![Alt text](image-24.png)
+
+-   <p> Open <b>"Package Manager Console"</b> and type:
+
+        Add-Migration NameOfMigration
+    
+    ![Alt text](image-25.png)
+
+    ![Alt text](image-27.png)
+
+-   <p> Will be added the folder <b>"Migrations"</b> </p>
+
+    ![Alt text](image-28.png)
+
+
+-   <p> To update in database, type: </p>
+
+        Update-Database
+
+-   <p> Done! </p>
+
+    ![Alt text](image-29.png)
