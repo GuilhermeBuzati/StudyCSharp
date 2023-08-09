@@ -1,5 +1,7 @@
 ﻿using AspNet.Data;
+using AspNet.Data.Dtos;
 using AspNet.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,16 +13,21 @@ namespace AspNet.Controllers
     {
         
         private FilmeContext _context;
+        private IMapper _mapper;
 
-        public FilmeController(FilmeContext context)
+        public FilmeController(FilmeContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         //FromBody = ResquestBody(Spring Boot) -> The content will be sending by body of request (JSON)
         [HttpPost]
-        public IActionResult AdicionarFilme([FromBody] Filme filme)
+        public IActionResult AdicionarFilme([FromBody] CreateFilmeDto filmeDto)
         {
+            //Transform filmeDto to Filme
+            Filme filme = _mapper.Map<Filme>(filmeDto);
+
             _context.Filmes.Add(filme);
             _context.SaveChanges();
 

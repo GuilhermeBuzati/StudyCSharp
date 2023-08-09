@@ -13,6 +13,7 @@
 <li><a href="#databaseConnection"> Database Connection </a></li>
 <li><a href="#migration"> Creating Table from Classe (Migration) </a></li>
 <li><a href="#context"> Update list films to DbContext created </a></li>
+<li><a href="#dtos"> DTOs </a></li>
 </ol>
 
 </br>
@@ -194,3 +195,37 @@
     ![Alt text](image-33.png)
 
 -   <p> Data will be insert into database, and list from it </p>
+
+               
+</br>
+<h2 id="dtos"> DTOs </h2>
+<hr>
+
+
+-   <p> Create a file "CreateFilmeDto.cs" same as file "Filme.cs" </p>
+
+    ![Alt text](image-34.png)
+
+    ![Alt text](image-35.png)
+
+-   <p> To map class Filme to CreateFilmeDto, install <b>AutoMapper</b> and <b>AutoMapper DependencyInjection</b> </p>
+    
+    ![Alt text](image-36.png)
+
+-   <p> How to use <b>AutoMapper</b>, add the line in "Program.cs":
+
+    ![Alt text](image-37.png)
+
+-   <p> Create the file "ProfileFilme.cs" in folder "Profiles" </p>
+
+    ![Alt text](image-38.png)
+
+    ![Alt text](image-39.png)
+
+-   <p> Now, "FilmeController.cs" add variable and constructor to Mapper </p>
+
+    ![Alt text](image-40.png)
+
+-   <p> Convert FilmeDto to Filme </p>
+
+    ![Alt text](image-42.png)

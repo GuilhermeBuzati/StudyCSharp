@@ -12,6 +12,9 @@ var connectionString = builder.Configuration.GetConnectionString("FilmeConnectio
 //Connect to datase
 builder.Services.AddDbContext<FilmeContext>(opts => opts.UseMySql(connectionString, serverVersion: ServerVersion.AutoDetect(connectionString)));
 
+//To use AutoMapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
