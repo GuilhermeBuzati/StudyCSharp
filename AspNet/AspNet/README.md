@@ -229,3 +229,13 @@
 -   <p> Convert FilmeDto to Filme </p>
 
     ![Alt text](image-42.png)
+
+-   <p> Update film with DTO </p>
+
+    ![Alt text](image-43.png)
+
+    ![Alt text](image-44.png)
+
+-   <p> In "FilmeController.cs": </p>
+    
+    ![Alt text](image-45.png)
