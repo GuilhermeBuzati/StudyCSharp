@@ -57,6 +57,10 @@
 
     ![Alt text](image-6.png)
 
+- <p> Example Method <b> DELETE </b>
+
+    ![Alt text](image-48.png)
+
 - <p> Returning data </p>
 
     ![Alt text](image-8.png)
