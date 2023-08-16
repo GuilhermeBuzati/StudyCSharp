@@ -6,31 +6,29 @@ using Alura.Adopet.Console.Modelos;
 // na linha abaixo cria-se uma instância de HttpClient para consumir API Adopet.
 HttpClient client = ConfiguraHttpClient("http://localhost:5057");
 Console.ForegroundColor = ConsoleColor.Green;
+
+Dictionary<string, IComando> comandosDoSistema = new()
+{
+    {"help", new Help() },
+    {"list", new List() },
+    {"import", new Import() },
+    {"show", new Show() }
+};
+
 try
 {    
     string comando = args[0].Trim();
-    switch (comando)
+    
+    if(comandosDoSistema.ContainsKey(comando))
     {
-        case "import":
-            var import = new Import();
-            await import.ExecutarAsync(args);
-            break;
-        case "help":
-            var help = new Help();
-            await help.ExecutarAsync(args);            
-            break;
-        case "show":  
-            var show = new Show();
-            await show.ExecutarAsync(args);
-            break;
-        case "list":
-            var list = new List();
-            await list.ExecutarAsync(args);
-            break;
-        default:
-            Console.WriteLine("Comando inválido!");
-            break;
+        IComando? comandoASerExecutado = comandosDoSistema[comando];
+        await comandoASerExecutado.ExecutarAsync(args);
     }
+    else
+    {
+        Console.WriteLine("Comando Inválido");
+    }
+    
 }
 catch (Exception ex)
 {
