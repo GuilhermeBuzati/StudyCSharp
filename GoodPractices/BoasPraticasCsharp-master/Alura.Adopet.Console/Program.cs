@@ -11,37 +11,9 @@ try
     switch (comando)
     {
         case "import":
-            List<Pet> listaDePet = new List<Pet>();
+            var import = new Import();
 
-            string caminhoDoArquivoDeImportacao = args[1];
-            using (StreamReader sr = new StreamReader(caminhoDoArquivoDeImportacao))
-            {
-                while (!sr.EndOfStream)
-                {
-                    // separa linha usando ponto e vírgula
-                    string[] propriedades = sr.ReadLine().Split(';');
-                    // cria objeto Pet a partir da separação
-                    Pet pet = new Pet(Guid.Parse(propriedades[0]),
-                      propriedades[1],
-                      TipoPet.Cachorro
-                     );
-
-                    Console.WriteLine(pet);
-                    listaDePet.Add(pet);
-                }
-            }
-            foreach (var pet in listaDePet)
-            {
-                try
-                {
-                    var resposta = await CreatePetAsync(pet);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
-            Console.WriteLine("Importação concluída!");
+            await import.ImportacaoArquivosPet(caminhoDoArquivoDeImportacao: args[1]);
             break;
         case "help":
             Console.WriteLine("Lista de comandos.");
