@@ -13,19 +13,19 @@ try
     {
         case "import":
             var import = new Import();
-            await import.ImportacaoArquivoPetAsync(caminhoDoArquivoDeImportacao:args[1]);
+            await import.ExecutarAsync(args);
             break;
         case "help":
             var help = new Help();
-            help.ExibeDocumentacao(parametros: args);            
+            await help.ExecutarAsync(args);            
             break;
         case "show":  
             var show = new Show();
-            show.ExibeConteudoArquivo(caminhoDoArquivoASerExibido: args[1]);
+            await show.ExecutarAsync(args);
             break;
         case "list":
             var list = new List();
-            await list.ListaDadosPetsDaAPIAsync();
+            await list.ExecutarAsync(args);
             break;
         default:
             Console.WriteLine("Comando inválido!");
