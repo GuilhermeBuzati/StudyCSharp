@@ -6,7 +6,7 @@ using System.Net.Http.Json;
 
 namespace Alura.Adopet.Console
 {
-    internal class HttpClientPet
+    public class HttpClientPet
     {
         private HttpClient client;
         public HttpClientPet()
