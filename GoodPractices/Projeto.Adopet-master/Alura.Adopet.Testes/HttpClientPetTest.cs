@@ -22,7 +22,7 @@ namespace Alura.Adopet.Testes
         [Fact]
         public async Task QuandoAPIForaDeveRetornarUmaExcecao()
         {
-            var clientePet = new HttpClientPet();
+            var clientePet = new HttpClientPet("http://localhost:1111");
 
             await Assert.ThrowsAnyAsync<Exception>(() => clientePet.ListPetsAsync());
         }
